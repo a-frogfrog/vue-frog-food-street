@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  // "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "exclude": ["node_modules", "dist"],
+  "include": ["packages/**/*.ts", "packages/**/*.tsx", "packages/**/*.vue"],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "moduleResolution": "Node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    // "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "rootDir": ".",
+    "baseUrl": ".",
+    "types": ["vite/client"],
+    "paths": {
+      // "@frog/*": ["packages/*"],
+      // "@frog/styles": ["packages/styles"],
+      // "@frog/styles/*": ["packages/styles/*"],
+      // "@frog/common-ui": ["packages/common-ui"],
+      // "@frog/common-ui/*": ["packages/common-ui/*"],
+      // "@frog/utils": ["packages/utils"],
+      // "@frog/utils/*": ["packages/utils/*"],
+      // "@frog/hooks": ["packages/hooks"],
+      // "@frog/hooks/*": ["packages/hooks/*"],
+      // "@frog/icons": ["packages/icons"],
+      // "@frog/icons/*": ["packages/icons/*"]
+    }
+  }
+}

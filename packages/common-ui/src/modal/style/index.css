@@ -1,0 +1,36 @@
+.frog-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(4px);
+}
+
+.frog-modal {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: 50%;
+  max-width: 500px;
+  min-width: 300px;
+  transition: all 0.3s ease-in-out;
+}
+
+.frog-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.frog-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
