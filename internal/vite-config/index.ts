@@ -1,1 +1,1 @@
-export * from './src/aliases.config';
+export * from './src/aliases';

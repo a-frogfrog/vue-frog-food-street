@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import { viteAliases } from '@frog/vite-config';
+import { viteAliases } from '../../internal/vite-config';
 
 import tailwindcss from '@tailwindcss/vite';
+import { resolve } from 'path';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -11,6 +12,9 @@ export default defineConfig({
   },
   plugins: [vue(), tailwindcss()],
   resolve: {
-    alias: viteAliases,
+    alias: {
+      '#': resolve(__dirname, './src'),
+      ...viteAliases,
+    },
   },
 });

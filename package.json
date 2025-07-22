@@ -10,6 +10,8 @@
   "scripts": {
     "build": "pnpm -r run build",
     "dev": "pnpm -r --parallel run dev",
+    "dev:admin": "pnpm -r --filter web-admin run dev",
+    "dev:supplier": "pnpm -r --filter mobile-supplier run dev",
     "test": "pnpm -r run test"
   },
   "repository": {
