@@ -76,6 +76,12 @@ importers:
         specifier: ^3.0.3
         version: 3.0.3(typescript@5.8.3)
 
+  apps/mobile-merchant:
+    dependencies:
+      '@frog/common-ui':
+        specifier: workspace:*
+        version: link:../../packages/common-ui
+
   apps/mobile-supplier:
     dependencies:
       '@frog/common-ui':
