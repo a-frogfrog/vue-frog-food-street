@@ -18,7 +18,7 @@ const emit = defineEmits<ModalContentEmits>();
     </header>
     <div class="frog-modal-body">
       <slot>
-        <span>{{ props.message || 'Are you sure?' }}</span>
+        <span>{{ props.message }}</span>
       </slot>
     </div>
     <footer class="frog-modal-footer">

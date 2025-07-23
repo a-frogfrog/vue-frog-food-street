@@ -9,6 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@frog/common-ui": "workspace:*"
+    "@frog/common-ui": "workspace:*",
+    "@frog/icons": "workspace:*",
+    "@frog/styles": "workspace:*"
+  },
+  "devDependencies": {
+    "@frog/tailwind-config": "workspace:*"
   }
 }

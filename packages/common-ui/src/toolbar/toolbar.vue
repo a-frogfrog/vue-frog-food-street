@@ -15,7 +15,7 @@ defineEmits<ToolBarEmits>();
   <div class="page__toolbar" @click="$emit('toolBarClick')">
     <div class="!p-2 flex">
       <i class="iconfont iconfont icon-anse !px-1"></i>
-      <h1 class="text-2xl font-smiley font-semibold">{{ title }}</h1>
+      <h1 class="text-4xl font-smiley font-semibold">{{ title }}</h1>
     </div>
     <div class="toolbar__content">
       <i class="iconfont icon-bars"></i>

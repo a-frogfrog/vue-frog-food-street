@@ -10,11 +10,7 @@ const emit = defineEmits<ModalEmits>();
     <Transition name="modal">
       <div v-if="props.show" class="frog-modal-overlay" tabindex="-1">
         <div class="frog-modal">
-          <ModalContent @close="emit('close')">
-            <template #header></template>
-            <template #body></template>
-            <template #footer></template>
-          </ModalContent>
+          <slot></slot>
         </div>
       </div>
     </Transition>

@@ -30,6 +30,7 @@ const { goToPage } = useTabBar();
           <template v-else>
             <div class="tabbar-item-content">
               <i class="icon" :class="item.icon"></i>
+              
               <!-- <span>{{ item.label }}</span> -->
             </div>
           </template>

@@ -1,0 +1,12 @@
+{
+  "name": "@frog/tailwind-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "files": [
+    "tailwind.config.js"
+  ],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.0"
+}

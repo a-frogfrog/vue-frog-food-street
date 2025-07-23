@@ -5,7 +5,8 @@
   "type": "module",
   "workspaces": [
     "packages/*",
-    "apps/*"
+    "apps/*",
+    "internal/*"
   ],
   "scripts": {
     "build": "pnpm -r run build",
@@ -30,31 +31,32 @@
   },
   "homepage": "https://github.com/a-frogfrog/frog-monorepo#readme",
   "devDependencies": {
-    "@types/js-cookie": "^3.0.6",
-    "@types/node": "^24.0.15",
-    "@types/nprogress": "^0.2.3",
-    "@vitejs/plugin-vue": "^6.0.0",
-    "@vue/tsconfig": "^0.7.0",
-    "echarts": "^5.6.0",
-    "eslint": "^9.31.0",
-    "prettier": "^3.6.2",
-    "turbo": "^2.5.5",
-    "typescript": "^5.8.3",
-    "vite": "^7.0.5",
-    "vite-plugin-inspect": "^11.3.0",
-    "vue-tsc": "^3.0.3"
+    "@types/js-cookie": "catalog:types",
+    "@types/node": "catalog:types",
+    "@types/nprogress": "catalog:types",
+    "@vitejs/plugin-vue": "catalog:build",
+    "@vue/tsconfig": "catalog:dev",
+    "echarts": "catalog:frontend",
+    "eslint": "catalog:lint",
+    "pncat": "catalog:cli",
+    "prettier": "catalog:lint",
+    "turbo": "catalog:monorepo",
+    "typescript": "catalog:dev",
+    "vite": "catalog:build",
+    "vite-plugin-inspect": "catalog:build",
+    "vue-tsc": "catalog:dev"
   },
   "dependencies": {
     "@frog/vite-config": "workspace:*",
-    "@tailwindcss/vite": "^4.1.11",
-    "@vue/shared": "^3.5.17",
-    "axios": "^1.10.0",
-    "js-cookie": "^3.0.5",
-    "nprogress": "^0.2.0",
-    "pinia": "^3.0.3",
-    "tailwindcss": "^4.1.11",
-    "vant": "^4.9.21",
-    "vue": "^3.5.17",
-    "vue-router": "^4.5.1"
+    "@tailwindcss/vite": "catalog:build",
+    "@vue/shared": "catalog:prod",
+    "axios": "catalog:network",
+    "js-cookie": "catalog:prod",
+    "nprogress": "catalog:frontend",
+    "pinia": "catalog:frontend",
+    "tailwindcss": "catalog:style",
+    "vant": "catalog:prod",
+    "vue": "catalog:frontend",
+    "vue-router": "catalog:frontend"
   }
 }

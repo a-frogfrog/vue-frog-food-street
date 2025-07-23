@@ -1,1 +1,2 @@
 import './src/base.css';
+import './src/icons/icon.css';

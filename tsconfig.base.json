@@ -17,6 +17,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "outDir": "dist",
     "rootDir": ".",
     "types": ["vite/client"]
   }
