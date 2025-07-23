@@ -9,6 +9,9 @@
   ],
   "scripts": {
     "build": "pnpm -r run build",
+    "build:admin": "pnpm -r --filter web-admin run build",
+    "build:supplier": "pnpm -r --filter mobile-supplier run build",
+    "build:merchant": "pnpm -r --filter mobile-merchant run build",
     "dev": "pnpm -r --parallel run dev",
     "dev:admin": "pnpm -r --filter web-admin run dev",
     "dev:supplier": "pnpm -r --filter mobile-supplier run dev",
@@ -27,10 +30,12 @@
   },
   "homepage": "https://github.com/a-frogfrog/frog-monorepo#readme",
   "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^24.0.15",
     "@types/nprogress": "^0.2.3",
     "@vitejs/plugin-vue": "^6.0.0",
     "@vue/tsconfig": "^0.7.0",
+    "echarts": "^5.6.0",
     "eslint": "^9.31.0",
     "prettier": "^3.6.2",
     "turbo": "^2.5.5",

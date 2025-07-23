@@ -19,7 +19,7 @@ defineProps({
 
 <template>
   <div
-    class="constainer-box"
+    class="container-box"
     :style="{ backgroundColor: background }"
     :class="[isShadow ? 'is-shadow' : '', isOverflow ? 'is-overflow' : '']"
   >
@@ -28,7 +28,7 @@ defineProps({
 </template>
 
 <style scoped>
-.constainer-box {
+.container-box {
   width: inherit;
   background-color: var(--bg-primary);
   border-radius: 6px;

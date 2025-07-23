@@ -4,6 +4,7 @@ const product = {
   component: () => import('#/views/product/index.vue'),
   meta: {
     tabBarPage: true,
+    title: '产品',
   },
 };
 

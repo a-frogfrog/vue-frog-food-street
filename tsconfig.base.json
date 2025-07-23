@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   // "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "exclude": ["node_modules", "dist"],
+  "exclude": ["**/node_modules/**", "**/dist/**"],
   "include": ["packages/**/*.ts", "packages/**/*.tsx", "packages/**/*.vue"],
   "compilerOptions": {
     "target": "ESNext",

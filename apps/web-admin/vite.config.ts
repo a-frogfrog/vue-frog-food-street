@@ -8,7 +8,8 @@ import { resolve } from 'path';
 // https://vite.dev/config/
 export default defineConfig({
   server: {
-    port: 4444,
+    host: true,
+    port: 3333,
   },
   plugins: [vue(), tailwindcss()],
   resolve: {

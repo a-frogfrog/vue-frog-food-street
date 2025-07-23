@@ -4,6 +4,7 @@ const order = {
   component: () => import('#/views/order/index.vue'),
   meta: {
     tabBarPage: true,
+    title: '订单',
   },
 };
 

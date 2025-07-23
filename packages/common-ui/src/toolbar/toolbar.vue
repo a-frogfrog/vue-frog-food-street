@@ -1,8 +1,13 @@
 <script setup lang="ts">
+interface ToolBarProps {
+  title: string;
+}
+
 type ToolBarEmits = {
   toolBarClick: () => void;
 };
 
+defineProps<ToolBarProps>();
 defineEmits<ToolBarEmits>();
 </script>
 
@@ -10,7 +15,7 @@ defineEmits<ToolBarEmits>();
   <div class="page__toolbar" @click="$emit('toolBarClick')">
     <div class="!p-2 flex">
       <i class="iconfont iconfont icon-anse !px-1"></i>
-      <h1 class="text-2xl font-smiley font-semibold">订单</h1>
+      <h1 class="text-2xl font-smiley font-semibold">{{ title }}</h1>
     </div>
     <div class="toolbar__content">
       <i class="iconfont icon-bars"></i>
@@ -21,11 +26,11 @@ defineEmits<ToolBarEmits>();
 <style scoped>
 .page__toolbar {
   z-index: 1000;
-  position: absolute;
   top: 0;
   right: 0;
   height: 40px;
   width: 100%;
+  background: rgba(255, 255, 255, 0);
 }
 
 .toolbar__content {

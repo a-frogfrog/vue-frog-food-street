@@ -4,3 +4,4 @@ packages:
   - 'internal/*'
 
 catalog:
+  tailwindcss: ^4.1.11
