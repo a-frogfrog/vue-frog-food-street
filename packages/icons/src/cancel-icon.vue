@@ -2,6 +2,7 @@
 
 <template>
   <svg
+    style="height: inherit; width: inherit"
     t="1752930623562"
     class="icon"
     viewBox="0 0 1024 1024"

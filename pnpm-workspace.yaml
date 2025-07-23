@@ -32,10 +32,13 @@ catalogs:
   network:
     axios: ^1.10.0
   prod:
+    '@studio-freight/lenis': ^1.0.42
     '@vue/shared': ^3.5.17
     js-cookie: ^3.0.5
     vant: ^4.9.21
   style:
+    autoprefixer: ^10.4.21
+    postcss: ^8.5.6
     tailwindcss: ^4.1.11
   types:
     '@types/js-cookie': ^3.0.6

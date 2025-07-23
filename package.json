@@ -10,13 +10,13 @@
   ],
   "scripts": {
     "build": "pnpm -r run build",
-    "build:admin": "pnpm -r --filter web-admin run build",
-    "build:supplier": "pnpm -r --filter mobile-supplier run build",
-    "build:merchant": "pnpm -r --filter mobile-merchant run build",
+    "build:a": "pnpm -r --filter web-admin run build",
+    "build:s": "pnpm -r --filter mobile-supplier run build",
+    "build:m": "pnpm -r --filter mobile-merchant run build",
     "dev": "pnpm -r --parallel run dev",
-    "dev:admin": "pnpm -r --filter web-admin run dev",
-    "dev:supplier": "pnpm -r --filter mobile-supplier run dev",
-    "dev:merchant": "pnpm -r --filter mobile-merchant run dev",
+    "dev:a": "pnpm -r --filter web-admin run dev",
+    "dev:s": "pnpm -r --filter mobile-supplier run dev",
+    "dev:m": "pnpm -r --filter mobile-merchant run dev",
     "test": "pnpm -r run test"
   },
   "repository": {

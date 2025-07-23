@@ -1,6 +1,7 @@
 import { RouteRecordRaw } from 'vue-router';
 import home from './modules/home';
 import mine from './modules/mine';
+import search from './modules/search';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -8,7 +9,7 @@ const routes: RouteRecordRaw[] = [
     name: 'root',
     redirect: '/home',
     component: () => import('#/layouts/basic.vue'),
-    children: [home, mine],
+    children: [home, mine, search],
   },
 ];
 

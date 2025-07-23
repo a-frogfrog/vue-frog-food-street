@@ -11,7 +11,8 @@
   "dependencies": {
     "@frog/common-ui": "workspace:*",
     "@frog/icons": "workspace:*",
-    "@frog/styles": "workspace:*"
+    "@frog/styles": "workspace:*",
+    "@studio-freight/lenis": "catalog:prod"
   },
   "devDependencies": {
     "@frog/tailwind-config": "workspace:*"

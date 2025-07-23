@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   // 基础主题配置（所有项目共享）
+  content: [
+    '../../packages/**/*.{js,ts,jsx,tsx,vue}',
+    '../../apps/**/*.{js,ts,jsx,tsx,vue}',
+  ],
   theme: {
     extend: {
       colors: {
@@ -12,6 +16,4 @@ module.exports = {
       },
     },
   },
-  // 共享插件（如需要）
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 };

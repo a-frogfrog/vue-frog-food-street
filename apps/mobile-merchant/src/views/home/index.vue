@@ -1,12 +1,40 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useRouter } from 'vue-router';
+import HomePromotion from './home-promotion.vue';
+import HomeRecommendSupplier from './home-recommend-supplier.vue';
+
+function useSearch() {
+  const router = useRouter();
+  const handleSearch = () => {
+    router.push({ name: 'search' });
+  };
+
+  return {
+    handleSearch,
+  };
+}
+
+const { handleSearch } = useSearch();
+</script>
 <template>
   <div>
     <div>
-      <img class="h-48 w-full" src="/imgs/background/welcome.webp" alt="" />
-      <div class="translate-y-12">
-        <input type="text" />
+      <img
+        class="h-48 object-cover w-full"
+        src="/imgs/background/welcome.webp"
+        alt=""
+      />
+      <div class="-translate-y-6 w-full !px-5">
+        <input
+          placeholder="搜索商品"
+          class="bg-white outline-0 h-14 shadow-md w-full"
+          type="text"
+          @focus="handleSearch"
+        />
       </div>
+
+      <HomeRecommendSupplier />
+      <HomePromotion />
     </div>
   </div>
 </template>
-<style scoped></style>

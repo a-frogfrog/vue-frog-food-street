@@ -6,3 +6,4 @@ export * from './src/modal';
 export * from './src/button';
 export * from './src/container';
 export * from './src/transition-loading';
+export * from './src/icon';
