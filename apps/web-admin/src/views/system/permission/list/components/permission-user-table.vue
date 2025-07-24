@@ -72,9 +72,17 @@ const columns = [
 
 <template>
   <div>
-    <h1 class="!pt-2">用户列表</h1>
-    <h3 class="text-sm text-gray-400">此权限下的一些用户</h3>
-    <Table :columns="columns" :data-source="dataSource" bordered>
+    <h1 class="!pt-2">
+      用户列表
+    </h1>
+    <h3 class="text-sm text-gray-400">
+      此权限下的一些用户
+    </h3>
+    <Table
+      :columns="columns"
+      :data-source="dataSource"
+      bordered
+    >
       <template #bodyCell="{ column }">
         <span v-if="column.dataIndex === 'operation'">
           <Button type="link">前往授权</Button>

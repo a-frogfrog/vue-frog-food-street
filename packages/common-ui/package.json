@@ -9,7 +9,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "scripts": {
+    "build": "vite build && vue-tsc --noEmit false",
+    "typecheck": "vue - tsc --noEmit"
+  },
   "dependencies": {
     "@frog/icons": "workspace:*"
+  },
+  "devDependencies": {
+    "@frog/tailwind-config": "workspace:*"
   }
 }

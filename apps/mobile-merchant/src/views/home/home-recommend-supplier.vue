@@ -13,8 +13,14 @@ const { supplierItems } = useSupplierData();
   <ScrollHorizontally>
     <template #content>
       <div class="flex gap-4 !px-4">
-        <template v-for="item in supplierItems" :key="item">
-          <SupplierAvatar :src="item.src" :name="item.name" />
+        <template
+          v-for="item in supplierItems"
+          :key="item"
+        >
+          <SupplierAvatar
+            :src="item.src"
+            :name="item.name"
+          />
         </template>
       </div>
     </template>

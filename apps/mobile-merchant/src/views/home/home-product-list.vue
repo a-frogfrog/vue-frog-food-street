@@ -9,7 +9,7 @@
       <h1 class="text-2xl font-bold mb-4">商品列表</h1>
     </div>
     <div class="!pt-4">
-      <slot name="items"></slot>
+      <slot name="items" />
     </div>
   </div>
 </template>

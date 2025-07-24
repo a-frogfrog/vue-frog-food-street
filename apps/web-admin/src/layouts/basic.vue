@@ -20,8 +20,8 @@ const { menuData } = useMenuData();
   <div class="layout h-screen flex">
     <TransitionLoading />
     <LayoutAside
-      :isCollapsed="isCollapsed"
-      :elWidth="isCollapsed ? '80px' : '240px'"
+      :is-collapsed="isCollapsed"
+      :el-width="isCollapsed ? '80px' : '240px'"
     >
       <template #logo>
         <LayoutLogo />
@@ -33,13 +33,16 @@ const { menuData } = useMenuData();
     <LayoutContent class="layout-content flex-1 h-full">
       <template #header>
         <LayoutHeader
-          :isSticky="true"
+          :is-sticky="true"
           height="60px"
           style="padding: 0 20px; background-color: var(--bg-primary)"
         />
       </template>
       <template #main>
-        <LayoutMain height="calc(100% - 60px)" style="padding: 1rem" />
+        <LayoutMain
+          height="calc(100% - 60px)"
+          style="padding: 1rem"
+        />
       </template>
     </LayoutContent>
   </div>

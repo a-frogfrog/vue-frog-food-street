@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import type { ModalProps, ModalEmits } from './types';
-import ModalContent from './modal-content.vue';
+import type { ModalProps } from './types';
 
 const props = defineProps<ModalProps>();
-const emit = defineEmits<ModalEmits>();
 </script>
 <template>
   <Teleport to="body">

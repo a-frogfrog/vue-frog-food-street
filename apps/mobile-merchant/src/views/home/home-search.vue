@@ -28,7 +28,7 @@ const { handleSearch } = useSearch();
     <div class="-translate-y-6 w-full !px-5">
       <input
         placeholder="搜索商品"
-        class="bg-white outline-0 h-14 shadow-md w-full"
+        class="bg-white outline-0 h-14 shadow-md rounded-md w-full"
         type="text"
         @focus="handleSearch"
       />

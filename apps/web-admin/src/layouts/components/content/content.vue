@@ -2,8 +2,8 @@
 
 <template>
   <div class="content">
-    <slot name="header"></slot>
-    <slot name="main"></slot>
+    <slot name="header" />
+    <slot name="main" />
   </div>
 </template>
 

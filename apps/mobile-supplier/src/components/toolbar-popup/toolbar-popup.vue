@@ -34,8 +34,8 @@ const { userLogout } = useToolbarPopupLogout();
 <template>
   <div>
     <Popup
-      teleport="body"
       v-model:show="show"
+      teleport="body"
       position="right"
       :style="{ width: '70%', height: '100%' }"
       class="dark:!bg-[#1f1f1f] dark:!text-white"

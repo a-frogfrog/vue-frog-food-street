@@ -13,16 +13,26 @@ const { isShow, title, handleToolBarClick } = useToolBar();
     <template #popup>
       <ToolBarPopup v-model:show="isShow" />
     </template>
-    <template #toolbar v-if="isTabBar">
-      <ToolBar :title="title" @tool-bar-click="handleToolBarClick" />
+    <template
+      v-if="isTabBar"
+      #toolbar
+    >
+      <ToolBar
+        :title="title"
+        @tool-bar-click="handleToolBarClick"
+      />
     </template>
-    <template #tabbar v-if="isTabBar">
+    <template
+      v-if="isTabBar"
+      #tabbar
+    >
       <KeepAlive>
         <TabBar
           v-model:active="activeName"
           :items="item.items"
           @tab-bar-item-click="handleClick"
-      /></KeepAlive>
+        />
+      </KeepAlive>
     </template>
     <template #content>
       <Content />

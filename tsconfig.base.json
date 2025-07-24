@@ -16,9 +16,11 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
     "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
     "outDir": "dist",
-    "rootDir": ".",
     "types": ["vite/client"]
   }
 }

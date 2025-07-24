@@ -23,7 +23,7 @@ defineProps({
     :style="{ backgroundColor: background }"
     :class="[isShadow ? 'is-shadow' : '', isOverflow ? 'is-overflow' : '']"
   >
-    <slot></slot>
+    <slot />
   </div>
 </template>
 

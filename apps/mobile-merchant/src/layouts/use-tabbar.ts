@@ -18,9 +18,9 @@ export function useTabBar() {
         label: '首页',
       },
       {
-        name: 'analysis',
+        name: 'order',
         icon: 'iconfont icon-_shiyongcishu',
-        label: '分析',
+        label: '订单',
       },
       {
         name: 'product',

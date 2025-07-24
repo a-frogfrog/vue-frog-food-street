@@ -2,7 +2,7 @@
   "name": "@frog/tailwind-config",
   "version": "1.0.0",
   "description": "",
-  "main": "tailwind.config.js",
+  "main": "index.js",
   "files": [
     "tailwind.config.js",
     "postcss.config.js"
@@ -10,7 +10,12 @@
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.11.0",
-  "dependencies": {
-
+  "peerDependencies": {
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11"
   }
 }

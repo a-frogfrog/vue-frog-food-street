@@ -1,4 +1,4 @@
-import './src/styles/tailwind.css';
+import './src/tailwind.css'; // Import Tailwind CSS
 export * from './src/tabbar';
 export * from './src/page';
 export * from './src/content';

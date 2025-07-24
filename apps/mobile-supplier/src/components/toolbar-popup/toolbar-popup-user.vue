@@ -6,9 +6,15 @@ const url =
   <div
     class="!px-2 !py-4 flex items-center border-b border-gray-200 dark:border-gray-700"
   >
-    <img class="w-20 h-20 rounded-md" :src="url" alt="" />
+    <img
+      class="w-20 h-20 rounded-md"
+      :src="url"
+      alt=""
+    >
     <div class="!pl-2">
-      <h4 class="text-base font-medium mt-2">John Doe</h4>
+      <h4 class="text-base font-medium mt-2">
+        John Doe
+      </h4>
       <span class="text-sm">john.doe@example.com</span>
     </div>
   </div>
