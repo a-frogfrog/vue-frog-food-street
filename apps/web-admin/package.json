@@ -9,13 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@ant-design/icons-vue": "catalog:icons",
+    "@ant-design/icons-vue": "^7.0.1",
     "@frog/common-ui": "workspace:*",
     "@frog/constants": "workspace:*",
     "@frog/events": "workspace:*",
     "@frog/hooks": "workspace:*",
     "@frog/request": "workspace:*",
-    "ant-design-vue": "catalog:frontend",
-    "element-plus": "catalog:frontend"
+    "ant-design-vue": "^4.2.6",
+    "element-plus": "^2.10.4"
   }
 }

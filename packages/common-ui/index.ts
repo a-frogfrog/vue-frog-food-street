@@ -1,3 +1,4 @@
+import './src/styles/tailwind.css';
 export * from './src/tabbar';
 export * from './src/page';
 export * from './src/content';

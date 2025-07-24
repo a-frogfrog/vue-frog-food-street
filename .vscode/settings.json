@@ -1,4 +1,5 @@
 {
+  "tailwindCSS.configPath": "${workspaceFolder}/tailwind.config.js",
   // Editor settings
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "expand",

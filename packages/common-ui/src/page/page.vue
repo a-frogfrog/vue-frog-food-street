@@ -1,9 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div
-    class="max-w-md mx-auto page w-full overflow-auto box-border relative bg-black"
-  >
+  <div class="max-w-md mx-auto w-full box-border relative">
     <slot></slot>
     <slot name="popup"></slot>
     <slot name="toolbar"></slot>
@@ -11,9 +9,3 @@
     <slot name="content"></slot>
   </div>
 </template>
-
-<style scoped>
-.page {
-  height: 100vh;
-}
-</style>

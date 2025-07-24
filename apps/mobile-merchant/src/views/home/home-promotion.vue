@@ -1,4 +1,8 @@
 <script setup lang="ts">
+/**
+ * @description: 首页-热门活动
+ */
+
 import { MoreIcon } from '@frog/icons';
 import { Icon } from '@frog/common-ui';
 import { FrostedPicture, ScrollHorizontally } from '#/components';

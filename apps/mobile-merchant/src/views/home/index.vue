@@ -1,40 +1,35 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
+/**
+ * @description 首页
+ */
+import HomeSearch from './home-search.vue';
 import HomePromotion from './home-promotion.vue';
 import HomeRecommendSupplier from './home-recommend-supplier.vue';
+import HomeProductList from './home-product-list.vue';
+import HomeProductItem from './home-product-item.vue';
+import { useProductData } from './data';
 
-function useSearch() {
-  const router = useRouter();
-  const handleSearch = () => {
-    router.push({ name: 'search' });
-  };
-
-  return {
-    handleSearch,
-  };
-}
-
-const { handleSearch } = useSearch();
+const { ProductItems } = useProductData();
+console.log(ProductItems);
 </script>
 <template>
   <div>
-    <div>
-      <img
-        class="h-48 object-cover w-full"
-        src="/imgs/background/welcome.webp"
-        alt=""
-      />
-      <div class="-translate-y-6 w-full !px-5">
-        <input
-          placeholder="搜索商品"
-          class="bg-white outline-0 h-14 shadow-md w-full"
-          type="text"
-          @focus="handleSearch"
+    <HomeSearch />
+    <HomeRecommendSupplier />
+    <HomePromotion />
+    <HomeProductList>
+      <template #items>
+        <HomeProductItem
+          v-for="item in ProductItems"
+          :key="item.id"
+          :product-name="item.name"
+          :img="item.img"
+          :price="item.price"
+          :is-official="item.isOfficial"
+          :sold="item.sold"
+          :stock="item.stock"
         />
-      </div>
-
-      <HomeRecommendSupplier />
-      <HomePromotion />
-    </div>
+      </template>
+    </HomeProductList>
   </div>
 </template>

@@ -1,43 +1,12 @@
 <script setup lang="ts">
+/**
+ * @description 首页推荐供应商
+ */
+
 import { ScrollHorizontally, SupplierAvatar } from '#/components';
+import { useSupplierData } from './data';
 
-function useSupplier() {
-  const supplierItems = [
-    {
-      name: '供应商1',
-      src: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-1.png',
-    },
-    {
-      name: '供应商1',
-      src: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-1.png',
-    },
-    {
-      name: '供应商1',
-      src: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-1.png',
-    },
-    {
-      name: '供应商1',
-      src: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-1.png',
-    },
-    {
-      name: '供应商1',
-      src: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-1.png',
-    },
-    {
-      name: '供应商1',
-      src: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-1.png',
-    },
-    {
-      name: '供应商1',
-      src: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-1.png',
-    },
-  ];
-  return {
-    supplierItems,
-  };
-}
-
-const { supplierItems } = useSupplier();
+const { supplierItems } = useSupplierData();
 </script>
 
 <template>

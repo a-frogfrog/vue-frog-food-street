@@ -11,8 +11,6 @@
   "license": "ISC",
   "packageManager": "pnpm@10.11.0",
   "dependencies": {
-    "autoprefixer": "catalog:style",
-    "postcss": "catalog:style",
-    "tailwindcss": "catalog:style"
+
   }
 }
