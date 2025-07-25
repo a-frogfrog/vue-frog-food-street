@@ -23,11 +23,6 @@ export function useTabBar() {
         label: '订单',
       },
       {
-        name: 'product',
-        icon: 'iconfont icon-shangpin',
-        label: '商品',
-      },
-      {
         name: 'mine',
         icon: 'iconfont icon-wode',
         label: '我的',

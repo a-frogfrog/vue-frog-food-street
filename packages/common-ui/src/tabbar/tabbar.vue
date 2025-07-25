@@ -30,8 +30,7 @@ const { goToPage } = useTabBar();
           <template v-else>
             <div class="tabbar-item-content">
               <i class="icon" :class="item.icon"></i>
-
-              <!-- <span>{{ item.label }}</span> -->
+              <span>{{ item.label }}</span>
             </div>
           </template>
         </div>
@@ -58,12 +57,13 @@ const { goToPage } = useTabBar();
   height: 100%;
   display: flex;
   justify-content: space-around;
-  padding: 10px;
+  padding: 4px;
 }
 
 .tabbar-item {
   border-radius: 50%;
   cursor: pointer;
+  flex: 1;
   transition:
     background-color 0.3s ease-in-out,
     color 0.3s ease-in-out,
@@ -81,17 +81,21 @@ const { goToPage } = useTabBar();
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 12px;
 }
 
 .icon {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .tabbar-cover {
+  font-size: 12px;
   height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  font-size: 12px;
   cursor: pointer;
   transition:
     background-color 0.3s ease-in-out,
@@ -101,8 +105,8 @@ const { goToPage } = useTabBar();
 }
 
 .tabbar-cover img {
-  width: 33px;
-  height: 33px;
+  width: 40px;
+  height: 40px;
   object-fit: cover;
   border: 2px solid #fff;
   border-radius: 50%;
