@@ -8,12 +8,13 @@ import HomeRecommendSupplier from './home-recommend-supplier.vue';
 import HomeProductList from './home-product-list.vue';
 import HomeProductItem from './home-product-item.vue';
 import { useProductData } from './data';
+import { TopNavigationBar } from '#/components';
 
 const { ProductItems } = useProductData();
-console.log(ProductItems);
 </script>
 <template>
   <div>
+    <TopNavigationBar :is-absolute="true" />
     <HomeSearch />
     <HomeRecommendSupplier />
     <HomePromotion />

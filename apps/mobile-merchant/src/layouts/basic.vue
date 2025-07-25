@@ -6,7 +6,7 @@ const { activeName, item, handleClick } = useTabBar();
 </script>
 
 <template>
-  <Page>
+  <Page class="h-screen overflow-auto">
     <template #content>
       <Content />
     </template>

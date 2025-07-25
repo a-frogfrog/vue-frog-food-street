@@ -20,15 +20,17 @@ const { handleSearch } = useSearch();
 
 <template>
   <div>
-    <img
-      class="h-48 object-cover w-full"
-      src="/imgs/background/welcome.webp"
-      alt=""
-    />
+    <div class="h-48">
+      <img
+        class="h-48 object-cover w-full"
+        src="/imgs/background/welcome.webp"
+        alt=""
+      />
+    </div>
     <div class="-translate-y-6 w-full !px-5">
       <input
         placeholder="搜索商品"
-        class="bg-white outline-0 h-14 shadow-md rounded-md w-full"
+        class="bg-white outline-0 border-0 h-14 shadow-lg rounded-md w-full"
         type="text"
         @focus="handleSearch"
       />
