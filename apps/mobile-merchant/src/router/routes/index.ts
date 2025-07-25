@@ -9,7 +9,7 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     name: 'root',
     redirect: '/home',
-    component: () => import('#/layouts/basic.vue'),
+    component: () => import('#/layouts/Basic.vue'),
     children: [home, mine, search, order],
   },
 ];

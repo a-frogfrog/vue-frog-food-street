@@ -1,7 +1,7 @@
 const order = {
   path: 'order',
   name: 'order',
-  component: () => import('#/views/order/index.vue'),
+  component: () => import('#/views/order/Index.vue'),
   meta: {
     title: '订单管理',
   },

@@ -1,7 +1,7 @@
 const home = {
   path: 'home',
   name: 'home',
-  component: () => import('#/views/home/index.vue'),
+  component: () => import('#/views/home/Index.vue'),
   meta: {
     title: '首页',
   },

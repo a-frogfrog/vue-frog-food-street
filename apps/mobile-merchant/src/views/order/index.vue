@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useOrderItems } from './data';
-import OrderItem from './order-item.vue';
-import OrderProductItem from './order-product-item.vue';
+import OrderItem from './OrderItem.vue';
+import OrderProductItem from './OrderProductItem.vue';
 import { TopNavigationBar } from '#/components';
 
 const { orderItems } = useOrderItems();

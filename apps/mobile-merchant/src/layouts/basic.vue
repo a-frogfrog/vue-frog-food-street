@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Page, Content, TabBar } from '@frog/common-ui';
-import { useTabBar } from './use-tabbar';
+import { useTabBar } from './useTabbar';
 
 const { activeName, item, handleClick } = useTabBar();
 </script>

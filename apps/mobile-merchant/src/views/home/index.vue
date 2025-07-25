@@ -2,11 +2,11 @@
 /**
  * @description 首页
  */
-import HomeSearch from './home-search.vue';
-import HomePromotion from './home-promotion.vue';
-import HomeRecommendSupplier from './home-recommend-supplier.vue';
-import HomeProductList from './home-product-list.vue';
-import HomeProductItem from './home-product-item.vue';
+import HomeSearch from './HomeSearch.vue';
+import HomePromotion from './HomePromotion.vue';
+import HomeRecommendSupplier from './HomeRecommendSupplier.vue';
+import HomeProductList from './HomeProductList.vue';
+import HomeProductItem from './HomeProductItem.vue';
 import { useProductData } from './data';
 import { TopNavigationBar } from '#/components';
 
