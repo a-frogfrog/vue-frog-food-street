@@ -1,19 +1,16 @@
 import type { TabBarProps } from '@frog/common-ui';
-import { ref, watchEffect } from 'vue';
+import { ref } from 'vue';
 import { useRoute } from 'vue-router';
 
 export function useTabBar() {
-  const activeName = ref('/');
   const route = useRoute();
-  const isTabBar = ref(route.meta.tabBarPage);
-  watchEffect(() => {
-    isTabBar.value = route.meta.tabBarPage;
-  });
+  const active = ref(route.name?.toString());
+  const tabBarPage = ref<boolean>(route.meta?.tabBarPage as boolean);
 
   const item: TabBarProps = {
     items: [
       {
-        name: '/',
+        name: 'home',
         icon: 'iconfont icon-shouye-zhihui',
         label: '首页',
       },
@@ -33,13 +30,13 @@ export function useTabBar() {
   };
 
   function handleClick(name: string) {
-    activeName.value = name;
+    active.value = name;
   }
 
   return {
-    activeName,
+    active,
     item,
     handleClick,
-    isTabBar,
+    tabBarPage,
   };
 }

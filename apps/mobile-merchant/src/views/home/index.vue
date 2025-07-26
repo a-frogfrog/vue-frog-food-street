@@ -14,7 +14,7 @@ const { ProductItems } = useProductData();
 </script>
 <template>
   <div>
-    <TopNavigationBar :is-absolute="true" />
+    <TopNavigationBar is-absolute />
     <HomeSearch />
     <HomeRecommendSupplier />
     <HomePromotion />

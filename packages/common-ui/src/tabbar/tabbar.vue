@@ -4,7 +4,6 @@ import { useTabBar } from './use-tabbar';
 
 const active = defineModel('active', {
   type: String,
-  required: true,
 });
 
 const props = defineProps<TabBarProps>();
@@ -71,9 +70,15 @@ const { goToPage } = useTabBar();
     filter 0.3s ease-in-out;
 }
 
-.is-active {
-  color: #45a0b6;
-  filter: drop-shadow(0 0 0.75rem #45a0b6);
+.tabbar-item.is-active {
+  color: #0c331f;
+  text-shadow: #0c331f 0 0 10px;
+}
+
+.tabbar-item.is-active .tabbar-cover img {
+  transform: scale(1.12);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px #0c331f59;
 }
 
 .tabbar-item-content {
@@ -108,8 +113,8 @@ const { goToPage } = useTabBar();
   width: 40px;
   height: 40px;
   object-fit: cover;
-  border: 2px solid #fff;
   border-radius: 50%;
+  border: 2px solid #fff;
   transition: transform 0.3s ease-in-out;
 }
 </style>

@@ -115,6 +115,9 @@ importers:
       '@frog/tailwind-config':
         specifier: workspace:*
         version: link:../../internal/tailwind-config
+      '@frog/types':
+        specifier: workspace:*
+        version: link:../../packages/types
 
   apps/mobile-supplier:
     dependencies:

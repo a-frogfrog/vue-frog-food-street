@@ -4,6 +4,7 @@ const mine = {
   component: () => import('#/views/mine/Index.vue'),
   meta: {
     title: '我的',
+    tabBarPage: true,
   },
 };
 

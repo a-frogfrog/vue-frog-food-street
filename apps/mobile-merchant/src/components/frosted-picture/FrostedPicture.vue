@@ -1,4 +1,9 @@
 <script setup lang="ts">
+/**
+ * @name FrostedPicture
+ * @description 毛玻璃效果的图片组件
+ */
+
 interface Props {
   src: string;
   alt?: string;

@@ -1,1 +1,1 @@
-export { default as TransitionLoading } from "./transition-loading.vue";
+export { default as TransitionLoading } from "./TransitionLoading.vue";

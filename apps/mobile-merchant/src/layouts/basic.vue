@@ -1,18 +1,16 @@
 <script setup lang="ts">
-import { Page, Content, TabBar } from '@frog/common-ui';
-import { useTabBar } from './useTabbar';
+import { TabBar } from '@frog/common-ui';
+import { useTabBar } from './data';
+import { Page } from '#/components';
 
-const { activeName, item, handleClick } = useTabBar();
+const { tabBarPage, active, item, handleClick } = useTabBar();
 </script>
 
 <template>
-  <Page class="h-screen overflow-auto">
-    <template #content>
-      <Content />
-    </template>
-    <template #tabbar>
+  <Page>
+    <template #tabBar v-if="tabBarPage">
       <TabBar
-        v-model:active="activeName"
+        v-model:active="active"
         :items="item.items"
         @tab-bar-item-click="handleClick"
       />

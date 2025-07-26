@@ -1,4 +1,9 @@
 <script setup lang="ts">
+/**
+ * @name Avatar
+ * @description 头像组件
+ */
+
 interface Props {
   src: string;
   name: string;

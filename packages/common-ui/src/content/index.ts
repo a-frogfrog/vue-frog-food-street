@@ -1,1 +1,1 @@
-export { default as Content } from './content.vue';
+export { default as Content } from './Content.vue';

@@ -1,4 +1,7 @@
 <script setup lang="ts">
+/**
+ * @description 顶部导航栏
+ */
 import { Icon } from '@frog/common-ui';
 import { SettingIcon, BarIcon } from '@frog/icons';
 import { computed } from 'vue';
@@ -11,7 +14,9 @@ interface Props {
 }
 const props = defineProps<Props>();
 const absoluteClass = computed(() => {
-  return props.isAbsolute ? 'absolute text-white top-0 left-0 z-10' : '';
+  return props.isAbsolute
+    ? 'absolute bg-[rgba(255,255,255,0.4)] backdrop-blur-sm top-0 left-0 z-10'
+    : '';
 });
 
 const { routeTitle } = useTopNavigationBar();
