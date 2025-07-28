@@ -1,3 +1,8 @@
+<script setup lang="ts">
+/**
+ * @description 登录页面的背景图
+ */
+</script>
 <template>
   <div>
     <img src="/imgs/background/login.png" alt="" />

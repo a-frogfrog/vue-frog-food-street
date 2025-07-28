@@ -5,6 +5,7 @@ const home = {
   meta: {
     title: '首页',
     tabBarPage: true,
+    topBar: true,
   },
 };
 

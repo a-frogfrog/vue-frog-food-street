@@ -1,4 +1,8 @@
 <script setup lang="ts">
+/**
+ * @description 登录表单
+ */
+
 import { Input } from '#/components';
 import { FrogButton } from '@frog/common-ui';
 import { useAuthStore } from '#/stores';

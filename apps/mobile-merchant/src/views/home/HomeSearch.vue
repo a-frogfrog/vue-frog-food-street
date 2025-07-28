@@ -6,7 +6,8 @@ import { useRouter } from 'vue-router';
 
 function useSearch() {
   const router = useRouter();
-  const handleSearch = () => {
+  const handleSearch = (event: Event) => {
+    event.preventDefault();
     router.push({ name: 'search' });
   };
 

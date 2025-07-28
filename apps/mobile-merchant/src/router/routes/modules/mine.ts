@@ -5,6 +5,7 @@ const mine = {
   meta: {
     title: '我的',
     tabBarPage: true,
+    topBar: true,
   },
 };
 

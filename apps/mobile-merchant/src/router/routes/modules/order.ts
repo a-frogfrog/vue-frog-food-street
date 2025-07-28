@@ -5,6 +5,7 @@ const order = {
   meta: {
     title: '订单管理',
     tabBarPage: true,
+    topBar: true,
   },
 };
 

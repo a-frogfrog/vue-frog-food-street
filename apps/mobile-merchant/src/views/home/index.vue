@@ -9,6 +9,7 @@ import HomeProductList from './HomeProductList.vue';
 import HomeProductItem from './HomeProductItem.vue';
 import { useProductData } from './data';
 import { TopNavigationBar } from '#/components';
+import { vSlideIn } from '@frog/directives';
 
 const { ProductItems } = useProductData();
 </script>
@@ -21,6 +22,7 @@ const { ProductItems } = useProductData();
     <HomeProductList>
       <template #items>
         <HomeProductItem
+          v-slideIn
           v-for="item in ProductItems"
           :key="item.id"
           :product-name="item.name"

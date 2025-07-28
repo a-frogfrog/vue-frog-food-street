@@ -108,6 +108,9 @@ importers:
       '@frog/constants':
         specifier: workspace:*
         version: link:../../packages/constants
+      '@frog/directives':
+        specifier: workspace:*
+        version: link:../../packages/directives
       '@frog/icons':
         specifier: workspace:*
         version: link:../../packages/icons
@@ -193,6 +196,8 @@ importers:
         version: link:../../internal/tailwind-config
 
   packages/constants: {}
+
+  packages/directives: {}
 
   packages/events: {}
 

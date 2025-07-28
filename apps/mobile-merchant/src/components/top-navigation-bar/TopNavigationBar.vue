@@ -27,7 +27,9 @@ const titleValue = computed(() => {
 
 <template>
   <div :class="props.isAbsolute ? absoluteClass : ''" class="w-full">
-    <div class="!px-4 !py-2 w-full flex justify-between items-center">
+    <div
+      class="!px-4 transition-all duration-200 !py-2 w-full flex justify-between items-center"
+    >
       <div>
         <h1 class="text-3xl font-bold font-inter">{{ titleValue }}</h1>
       </div>

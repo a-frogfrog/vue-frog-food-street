@@ -3,6 +3,7 @@ import { useOrderItems } from './data';
 import OrderItem from './OrderItem.vue';
 import OrderProductItem from './OrderProductItem.vue';
 import { TopNavigationBar } from '#/components';
+import { vSlideIn } from '@frog/directives';
 
 const { orderItems } = useOrderItems();
 </script>
@@ -12,6 +13,7 @@ const { orderItems } = useOrderItems();
     <TopNavigationBar />
     <div class="!p-4">
       <OrderItem
+        v-slideIn
         v-for="item in orderItems"
         :is-official="item.isOfficial"
         :key="item.orderId"
