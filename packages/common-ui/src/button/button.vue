@@ -25,5 +25,3 @@ const useClassName = computed(() => {
     <slot></slot>
   </div>
 </template>
-
-<style scoped></style>

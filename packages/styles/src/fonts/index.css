@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&family=ZCOOL+KuaiLe&display=swap');
 
 @font-face {
   font-family: 'SmileySans';
@@ -15,4 +16,9 @@
 
 .font-inter {
   font-family: 'Inter', sans-serif;
+}
+
+.font-zcool {
+  font-family: 'ZCOOL KuaiLe', sans-serif;
+  font-style: normal;
 }

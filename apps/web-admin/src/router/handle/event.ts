@@ -1,4 +1,4 @@
-import { eventEmitter } from '../../../../../packages/events';
+import { eventEmitter } from '@frog/events';
 import router from '..';
 //路由事件
 

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@frog/common-ui": "workspace:*",
+    "@frog/constants": "workspace:*",
     "@frog/icons": "workspace:*",
     "@frog/styles": "workspace:*"
   },

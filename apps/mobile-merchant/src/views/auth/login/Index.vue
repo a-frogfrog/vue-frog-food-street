@@ -1,2 +1,12 @@
-<script setup lang="ts"></script>
-<template>登录</template>
+<script setup lang="ts">
+import LoginCover from './LoginCover.vue';
+import LoginForm from './LoginForm.vue';
+import LoginFooter from './LoginFooter.vue';
+</script>
+<template>
+  <div>
+    <LoginCover />
+    <LoginForm />
+    <LoginFooter />
+  </div>
+</template>

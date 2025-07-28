@@ -1,5 +1,5 @@
 import type { NavigationGuardWithThis, NavigationHookAfter } from 'vue-router';
-import { eventEmitter } from '../../../../../packages/events';
+import { eventEmitter } from '@frog/events';
 import { useAuthStore } from '#/stores';
 
 const beforeEach: NavigationGuardWithThis<undefined> = (to: any) => {

@@ -6,6 +6,9 @@ const auth = {
       path: 'login',
       name: 'Login',
       component: () => import('#/views/auth/login/Index.vue'),
+      meta: {
+        title: '登录',
+      },
     },
   ],
 };
