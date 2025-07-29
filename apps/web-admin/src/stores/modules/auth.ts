@@ -6,9 +6,11 @@ import { defineStore } from 'pinia';
 /**
  * 鉴权模块
  */
+
+const { getStoreToken, setStoreToken } = useToken();
 export const useAuthStore = defineStore('auth', {
   state: () => ({
-    token: useToken().getToken() || '',
+    token: getStoreToken() || '',
     userInfo: {},
   }),
   getters: {
@@ -18,7 +20,7 @@ export const useAuthStore = defineStore('auth', {
   actions: {
     setToken(token: string) {
       this.token = token;
-      useToken().setToken(token);
+      setStoreToken(token);
     },
     getToken(): string | undefined {
       return this.token;

@@ -5,6 +5,7 @@
   "type": "module",
   "workspaces": [
     "packages/*",
+    "packages/effects/*",
     "apps/*",
     "internal/*"
   ],
@@ -19,7 +20,7 @@
     "dev:m": "pnpm -r --filter mobile-merchant run dev",
     "test": "pnpm -r run test",
     "lint": "pnpm dlx eslint .",
-    "catalog": "pnpm dlx pncat migrate"
+    "catalog": "pnpm dlx pact migrate"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
   },
   "homepage": "https://github.com/a-frogfrog/frog-monorepo#readme",
   "devDependencies": {
+    "@frog/types": "workspace:*",
     "@tailwindcss/postcss": "catalog:style",
     "@types/js-cookie": "catalog:types",
     "@types/node": "catalog:types",

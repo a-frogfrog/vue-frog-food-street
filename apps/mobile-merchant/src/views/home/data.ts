@@ -3,8 +3,6 @@
  * @description: 首页视图组件数据
  */
 
-import { getData } from "#/api";
-
 export function useProductData() {
   const ProductItems = [
     {
@@ -53,8 +51,6 @@ export function useProductData() {
       stock: 400,
     },
   ];
-
-  const data = getData();
   return {
     ProductItems,
   };

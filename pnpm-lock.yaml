@@ -148,6 +148,9 @@ importers:
         specifier: catalog:frontend
         version: 4.5.1(vue@3.5.18(typescript@5.8.3))
     devDependencies:
+      '@frog/types':
+        specifier: workspace:*
+        version: link:packages/effects/types
       '@tailwindcss/postcss':
         specifier: catalog:style
         version: 4.1.11
@@ -220,9 +223,18 @@ importers:
       '@frog/directives':
         specifier: workspace:*
         version: link:../../packages/directives
+      '@frog/events':
+        specifier: workspace:*
+        version: link:../../packages/effects/events
+      '@frog/hooks':
+        specifier: workspace:*
+        version: link:../../packages/hooks
       '@frog/icons':
         specifier: workspace:*
         version: link:../../packages/icons
+      '@frog/request':
+        specifier: workspace:*
+        version: link:../../packages/effects/request
       '@frog/styles':
         specifier: workspace:*
         version: link:../../packages/effects/styles
@@ -232,7 +244,7 @@ importers:
         version: link:../../internal/tailwind-config
       '@frog/types':
         specifier: workspace:*
-        version: link:../../packages/types
+        version: link:../../packages/effects/types
 
   apps/mobile-supplier:
     dependencies:
@@ -262,7 +274,7 @@ importers:
         version: link:../../packages/effects/constants
       '@frog/events':
         specifier: workspace:*
-        version: link:../../packages/events
+        version: link:../../packages/effects/events
       '@frog/hooks':
         specifier: workspace:*
         version: link:../../packages/hooks
@@ -308,11 +320,13 @@ importers:
 
   packages/effects/constants: {}
 
+  packages/effects/events: {}
+
   packages/effects/request: {}
 
   packages/effects/styles: {}
 
-  packages/events: {}
+  packages/effects/types: {}
 
   packages/hooks: {}
 

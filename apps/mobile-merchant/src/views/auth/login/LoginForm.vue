@@ -16,7 +16,6 @@ function useLogin() {
   });
 
   const handleLogin = () => {
-    console.log(loginForm.value);
     authStore.login(loginForm.value);
   };
 

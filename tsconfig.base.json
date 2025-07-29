@@ -20,7 +20,6 @@
     "strictFunctionTypes": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "outDir": "dist",
-    "types": ["vite/client"]
+    "outDir": "dist"
   }
 }

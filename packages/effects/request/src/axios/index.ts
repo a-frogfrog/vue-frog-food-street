@@ -1,2 +1,1 @@
-export * from './createRequest';
-export * from './interceptor';
+export { createRequest as createAxiosRequest } from './request';

@@ -11,8 +11,12 @@ const routes: RouteRecordRaw[] = [
     name: 'root',
     redirect: '/home',
     component: () => import('#/layouts/Basic.vue'),
-    children: [home, mine, search, order, auth],
+    children: [home, mine, search, order],
+    meta: {
+      isAuth: true,
+    },
   },
+  auth,
 ];
 
 export default routes;

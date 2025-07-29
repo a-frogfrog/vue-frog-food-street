@@ -1,25 +1,9 @@
-import axios from 'axios';
+/**
+ * @description 请求模块
+ */
 
-interface BaseRequestOptions {
-  baseURL: string;
-  timeout?: number;
-  headers?: object;
-}
+import { createAxiosRequest } from '@frog/request';
 
-interface RequestOptions {
-  url: string;
-  method: string;
-  data?: object;
-  params?: object;
-}
-
-export function createRequest(baseOptions: BaseRequestOptions) {
-  const instance = axios.create({
-    baseURL: baseOptions.baseURL,
-    timeout: baseOptions.timeout,
-    headers: baseOptions.headers,
-  });
-  return function (options: RequestOptions) {
-    return instance.request(options);
-  };
-}
+export const requestClient = createAxiosRequest({
+  baseURL: import.meta.env.VITE_APP_API_URL,
+});

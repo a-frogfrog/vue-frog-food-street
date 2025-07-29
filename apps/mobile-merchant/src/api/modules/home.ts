@@ -1,16 +1,5 @@
-import { createRequest } from '../request';
-
-const request = createRequest({
-  baseURL: 'https://api.fsm.frogfrog.cn/api/admin',
-});
+import { requestClient } from '#/api/request';
 
 export function getData() {
-  return request({
-    url: '/Auth/Login',
-    method: 'post',
-    data: {
-      username: 'admin',
-      password: '123456',
-    },
-  });
+  return requestClient.post('/auth/login', { account: '', password: '' });
 }

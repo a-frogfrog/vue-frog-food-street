@@ -12,7 +12,10 @@
     "@frog/common-ui": "workspace:*",
     "@frog/constants": "workspace:*",
     "@frog/directives": "workspace:*",
+    "@frog/events": "workspace:*",
+    "@frog/hooks": "workspace:*",
     "@frog/icons": "workspace:*",
+    "@frog/request": "workspace:*",
     "@frog/styles": "workspace:*"
   },
   "devDependencies": {

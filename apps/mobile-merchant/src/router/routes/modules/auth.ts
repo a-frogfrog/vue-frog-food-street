@@ -1,5 +1,5 @@
 const auth = {
-  path: 'auth',
+  path: '/auth',
   name: 'Auth',
   children: [
     {
