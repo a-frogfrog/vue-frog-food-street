@@ -2,3 +2,48 @@ packages:
   - 'apps/*'
   - 'packages/*'
   - 'internal/*'
+  - 'packages/effects/*'
+catalogs:
+  build:
+    '@tailwindcss/vite': ^4.1.11
+    '@vitejs/plugin-vue': ^6.0.1
+    vite: ^7.0.6
+    vite-plugin-dts: ^4.5.4
+    vite-plugin-inspect: ^11.3.2
+  cli:
+    pncat: 0.2.6
+  dev:
+    '@vue/tsconfig': ^0.5.1
+    typescript: ^5.8.3
+    vue-tsc: ^2.2.12
+  frontend:
+    ant-design-vue: ^4.2.6
+    echarts: ^5.6.0
+    element-plus: ^2.10.4
+    nprogress: ^0.2.0
+    pinia: ^2.3.1
+    vue: ^3.5.18
+    vue-router: ^4.5.1
+  icons:
+    '@ant-design/icons-vue': ^7.0.1
+  lint:
+    eslint: ^9.31.0
+    eslint-plugin-vue: ^10.3.0
+    prettier: ^3.6.2
+  monorepo:
+    turbo: ^2.5.5
+  network:
+    axios: ^1.11.0
+  prod:
+    '@vue/shared': ^3.5.18
+    js-cookie: ^3.0.5
+    vant: ^4.9.21
+  style:
+    '@tailwindcss/postcss': ^4.1.11
+    autoprefixer: ^10.4.21
+    postcss: ^8.5.6
+    tailwindcss: ^4.1.11
+  types:
+    '@types/js-cookie': ^3.0.6
+    '@types/node': ^20.19.9
+    '@types/nprogress': ^0.2.3

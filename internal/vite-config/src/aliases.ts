@@ -2,12 +2,13 @@ import { resolve } from 'path';
 
 const aliases = {
   '@frog/*': resolve('../../packages/*'),
-  '@frog/common-ui': resolve('../../packages/common-ui'),
   '@frog/utils': resolve('../../packages/utils'),
   '@frog/hooks': resolve('../../packages/hooks'),
-  '@frog/constants': resolve('../../packages/constants'),
   '@frog/events': resolve('../../packages/events'),
-  '@frog/request': resolve('../../packages/request'),
+  '@frog/common-ui': resolve('../../packages/effects/common-ui'),
+  '@frog/constants': resolve('../../packages/effects/constants'),
+  '@frog/request': resolve('../../packages/effects/request'),
+  '@frog/styles': resolve('../../packages/effects/styles'),
   '@frog/vite-config': resolve('../../internal/vite-config'),
 };
 

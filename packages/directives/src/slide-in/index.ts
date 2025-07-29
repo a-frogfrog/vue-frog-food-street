@@ -23,7 +23,6 @@ const observer = new IntersectionObserver((entries) => {
       const el = elMap.get(entry.target);
       el && el.play(); // 播放动画
       observer.unobserve(entry.target);
-      console.log('intersecting');
     }
   });
 });
@@ -37,7 +36,6 @@ export const vSlideIn = {
     if (!isViewPort(el)) {
       return;
     }
-    console.log(binding);
     const animation = el.animate(animations, animationOptions);
     observer.observe(el);
     elMap.set(el, animation);

@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "../../../tsconfig.base.json",
   "compilerOptions": {
     "rootDir": ".",
     "declaration": true,
@@ -9,6 +9,6 @@
     "skipLibCheck": true,
     "types": ["vite/client", "vue"]
   },
-  "include": ["index.ts"],
+  "include": ["src/index.ts"],
   "exclude": ["node_modules", "dist"]
 }

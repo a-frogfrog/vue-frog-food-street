@@ -11,11 +11,11 @@
   "license": "ISC",
   "packageManager": "pnpm@10.11.0",
   "peerDependencies": {
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "catalog:style"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.11"
+    "autoprefixer": "catalog:style",
+    "postcss": "catalog:style",
+    "tailwindcss": "catalog:style"
   }
 }
