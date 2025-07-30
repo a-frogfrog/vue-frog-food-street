@@ -1,1 +1,1 @@
-export * from './use-loading';
+export * from './useLoading';
