@@ -1,17 +1,10 @@
-import { createAxiosRequest } from '@frog/request';
+import { requestClient } from '#/api/request';
 import type { LoginRequest, LoginResponseApi, ApiResponse } from '#/types';
 
 export function login(data: LoginRequest): Promise<LoginResponseApi> {
-  return createAxiosRequest({
-    url: '/auth/login',
-    method: 'post',
-    data,
-  });
+  return requestClient.post('/auth/login', data);
 }
 
 export function checkLogin(): Promise<ApiResponse> {
-  return createAxiosRequest({
-    url: '/auth/checkLogin',
-    method: 'get',
-  });
+  return requestClient.get('/auth/checkLogin');
 }

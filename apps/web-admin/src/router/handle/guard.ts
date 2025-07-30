@@ -10,7 +10,7 @@ const beforeEach: NavigationGuardWithThis<undefined> = (to: any) => {
     if (!authStore.isAuthenticated) {
       return { path: '/auth/login' };
     }
-    authStore.checkLogin();
+    // authStore.checkLogin();
   }
 
   return true;

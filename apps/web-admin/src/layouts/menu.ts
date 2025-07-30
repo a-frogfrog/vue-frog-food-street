@@ -8,13 +8,13 @@ const menuStore = useMenuStore();
 export function useMenuData() {
   const menuData = ref<ItemType[]>();
 
-  _getMenuData();
   async function _getMenuData() {
     const response = await menuStore.getMenuList();
     if (response.isSucceed) {
       menuData.value = convertMenuData(response.data);
     }
   }
+  _getMenuData();
 
   return {
     menuData,
@@ -24,7 +24,7 @@ export function useMenuData() {
 
 function convertMenuData(data: PermissionMenuItem[]): ItemType[] {
   return data.map((item) => {
-    const baseitem: ItemType = {
+    const baseItem: ItemType = {
       key: item.url,
       title: item.name,
       label: item.name,
@@ -34,10 +34,10 @@ function convertMenuData(data: PermissionMenuItem[]): ItemType[] {
 
     return item.children.length > 0
       ? {
-          ...baseitem,
+          ...baseItem,
           children: convertMenuData(item.children),
         }
-      : baseitem;
+      : baseItem;
   });
 }
 

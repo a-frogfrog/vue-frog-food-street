@@ -3,7 +3,7 @@
  * @description 顶部导航栏
  */
 import { Icon } from '@frog/common-ui';
-import { SettingIcon, BarIcon } from '@frog/icons';
+import { SettingIcon, BarIcon, ShoppingCart } from '@frog/icons';
 import { computed } from 'vue';
 import { useTopNavigationBar } from './useTopNavigationBar';
 
@@ -34,6 +34,11 @@ const titleValue = computed(() => {
         <h1 class="text-3xl font-bold font-inter">{{ titleValue }}</h1>
       </div>
       <div class="flex gap-4">
+        <div>
+          <Icon :size="26">
+            <ShoppingCart />
+          </Icon>
+        </div>
         <div>
           <Icon :size="26">
             <BarIcon />

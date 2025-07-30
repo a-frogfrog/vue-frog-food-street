@@ -6,3 +6,4 @@ export { default as OfficialAuthIcon } from './src/official-auth-icon.vue';
 export { default as MonsterIcon } from './src/monster-icon.vue';
 export { default as BarIcon } from './src/barIcon.vue';
 export { default as SettingIcon } from './src/settingIcon.vue';
+export { default as ShoppingCart } from './src/ShoppingCart.vue';

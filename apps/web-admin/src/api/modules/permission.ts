@@ -1,18 +1,10 @@
 import type { PermissionListApi, PermissionMenuApi } from '#/types';
-import { createAxiosRequest } from '@frog/request';
+import { requestClient } from '#/api/request';
 
 export function getPermissionList(): Promise<PermissionListApi> {
-  return createAxiosRequest({
-    url: '/Permission/GetPermissionList',
-    method: 'get',
-    params: {},
-  });
+  return requestClient.post('/Permission/GetPermissionList');
 }
 
 export function getPermissionMenu(): Promise<PermissionMenuApi> {
-  return createAxiosRequest({
-    url: '/Permission/GetUserPermissionMenuList',
-    method: 'get',
-    params: {},
-  });
+  return requestClient.post('/Permission/GetUserPermissionMenuList');
 }

@@ -1,5 +1,10 @@
 import axios from 'axios';
-
+import {
+  handleRequest,
+  handleRequestError,
+  handleResponse,
+  handleResponseError,
+} from './interceptors';
 /**
  * @description 创建基础请求实例
  */
@@ -17,8 +22,11 @@ export function createRequest(baseOptions: BaseRequestOptions) {
     headers: baseOptions.headers,
   });
 
+  instance.interceptors.request.use(handleRequest, handleRequestError);
+  instance.interceptors.response.use(handleResponse, handleResponseError);
+
   const requestClient = {
-    get: (url: string, params?: {}) => {
+    get: (url: string, params?: {}): any => {
       return instance.request({
         url,
         method: 'get',
@@ -26,7 +34,7 @@ export function createRequest(baseOptions: BaseRequestOptions) {
       });
     },
 
-    post: (url: string, data?: {}) => {
+    post(url: string, data?: {}): any {
       return instance.request({
         url,
         method: 'post',
