@@ -11,25 +11,23 @@ const { currentTheme, toggleTheme } = useTheme();
 </script>
 
 <template>
-  <Teleport to="body">
-    <Popup
-      class="dark:!bg-[#000000] dark:text-white"
-      position="left"
-      :style="{ width: '70%', height: '100%' }"
-      v-model:show="show"
-    >
-      <div class="!p-4">
-        <SideNavigationAvatar />
-        <div>
-          <div class="!mt-8">
-            <SideNavigationItem :title="'首页'" />
-            <SideNavigationItem
-              @click="toggleTheme"
-              :title="currentTheme == 'light' ? '夜间模式' : '日间模式'"
-            />
-          </div>
+  <Popup
+    class="dark:!bg-[#000000] dark:text-white"
+    position="left"
+    :style="{ width: '70%', height: '100%' }"
+    v-model:show="show"
+  >
+    <div class="!p-4">
+      <SideNavigationAvatar />
+      <div>
+        <div class="!mt-8">
+          <SideNavigationItem :title="'首页'" />
+          <SideNavigationItem
+            @click="toggleTheme"
+            :title="currentTheme == 'light' ? '夜间模式' : '日间模式'"
+          />
         </div>
       </div>
-    </Popup>
-  </Teleport>
+    </div>
+  </Popup>
 </template>

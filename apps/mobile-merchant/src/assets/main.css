@@ -1,5 +1,5 @@
 @import './styles/tailwind.css';
-@import './styles//theme.css';
+@import './styles/theme.css';
 
 #app {
   font-family: 'Inter', sans-serif;

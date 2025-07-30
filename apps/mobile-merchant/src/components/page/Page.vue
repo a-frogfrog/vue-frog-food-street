@@ -6,16 +6,14 @@
 
 <template>
   <div
+    role="page"
     class="h-screen overflow-x-hidden overflow-y-auto dark:bg-[#000000]"
     style="scrollbar-width: none"
   >
-    <div>
-      <slot name="topNavigationBar"></slot>
-    </div>
-    <div>
+    <div role="sideNavigation">
       <slot name="sideNavigation"></slot>
     </div>
-    <div class="!pb-10">
+    <div role="main" class="!pb-10">
       <slot name="main">
         <RouterView v-slot="{ Component }">
           <Transition name="slide-fade" mode="out-in">
@@ -24,7 +22,7 @@
         </RouterView>
       </slot>
     </div>
-    <div>
+    <div role="tabBar">
       <slot name="tabBar"></slot>
     </div>
   </div>

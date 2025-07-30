@@ -1,6 +1,4 @@
-import './tailwind.css'; // Import Tailwind CSS
 export * from './tabbar';
-export * from './page';
 export * from './content';
 export * from './modal';
 export * from './button';

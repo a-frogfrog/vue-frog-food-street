@@ -19,6 +19,7 @@ const useClassName = computed(() => {
 <template>
   <div
     :class="useClassName"
+    class="bg-amber-200"
     :style="{ backgroundColor: props.color, border: props.color }"
     @click="emit('click')"
   >

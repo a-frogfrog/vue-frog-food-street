@@ -2,8 +2,11 @@
 import { TabBar } from '@frog/common-ui';
 import { useTabBar } from './data';
 import { Page } from '#/components';
+import { SideNavigation } from '#/components';
+import { useSideNavigation } from '#/components/side-navigation/useSideNavigation';
 
 const { tabBarPage, active, item, handleClick } = useTabBar();
+const { isShow } = useSideNavigation();
 </script>
 
 <template>
@@ -16,8 +19,8 @@ const { tabBarPage, active, item, handleClick } = useTabBar();
         @tab-bar-item-click="handleClick"
       />
     </template>
-    <template #>
-      <SideNavigation />
+    <template #sideNavigation>
+      <SideNavigation :show="isShow" />
     </template>
   </Page>
 </template>
