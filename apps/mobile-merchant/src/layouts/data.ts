@@ -20,6 +20,11 @@ export function useTabBar() {
         label: '订单',
       },
       {
+        name: 'cart',
+        icon: 'iconfont icon-gouwuche',
+        label: '购物车',
+      },
+      {
         name: 'mine',
         icon: 'iconfont icon-wode',
         label: '我的',

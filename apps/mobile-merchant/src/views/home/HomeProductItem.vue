@@ -19,11 +19,13 @@ defineProps<Props>();
 </script>
 
 <template>
-  <div class="flex !mb-4">
+  <div class="flex !mb-4 dark:bg-[#1A1A1A] dark:text-[#E9E9E9] !p-2 rounded-md">
     <img class="w-24 h-24 rounded-md" :src="img" :alt="productName" />
-    <div class="relative !ml-4 border-b border-gray-200 flex-1">
+    <div
+      class="relative !ml-4 border-b dark:border-transparent border-gray-200 flex-1"
+    >
       <div
-        class="absolute top-0 right-0 text-gray-500 flex border border-gray-100 !p-1 rounded-md"
+        class="absolute top-0 right-0 text-gray-500 flex border border-gray-100 dark:border-gray-700 dark:shadow-md !p-1 rounded-md"
       >
         <span class="text-xs font-inter !px-1">{{
           isOfficial ? '官方' : '个人'
@@ -38,7 +40,9 @@ defineProps<Props>();
         </Icon>
       </div>
       <div class="flex gap-4 items-center !mt-2">
-        <div class="text-gray-500 w-fit bg-gray-100 rounded-md !px-1">
+        <div
+          class="text-gray-500 w-fit bg-gray-100 dark:bg-[#313131] dark:shadow-md rounded-lg !px-1"
+        >
           <span>已售:</span>
           <span>{{ sold }}</span>
         </div>

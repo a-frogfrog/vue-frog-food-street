@@ -8,14 +8,30 @@ import HomeRecommendSupplier from './HomeRecommendSupplier.vue';
 import HomeProductList from './HomeProductList.vue';
 import HomeProductItem from './HomeProductItem.vue';
 import { useProductData } from './data';
-import { TopNavigationBar } from '#/components';
+import {
+  TopNavigationBar,
+  TopNavigationBarItems
+} from '#/components';
 import { vSlideIn } from '@frog/directives';
+import { ref } from 'vue';
 
+function useSideNavigation() {
+  const show = ref(false);
+  const handleBarClick = () => {
+    show.value = !show.value;
+  };
+  return { show, handleBarClick };
+}
 const { ProductItems } = useProductData();
+const {  handleBarClick } = useSideNavigation();
 </script>
 <template>
   <div>
-    <TopNavigationBar is-absolute />
+    <TopNavigationBar is-absolute>
+      <template #items>
+        <TopNavigationBarItems @bar-click="handleBarClick" />
+      </template>
+    </TopNavigationBar>
     <HomeSearch />
     <HomeRecommendSupplier />
     <HomePromotion />

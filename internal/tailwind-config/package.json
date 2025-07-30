@@ -2,20 +2,9 @@
   "name": "@frog/tailwind-config",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "files": [
-    "tailwind.config.js",
-    "postcss.config.js"
-  ],
+  "main": "tailwind.config.ts",
+  "types": "tailwind.config.ts",
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.11.0",
-  "peerDependencies": {
-    "tailwindcss": "catalog:style"
-  },
-  "devDependencies": {
-    "autoprefixer": "catalog:style",
-    "postcss": "catalog:style",
-    "tailwindcss": "catalog:style"
-  }
+  "packageManager": "pnpm@10.11.0"
 }

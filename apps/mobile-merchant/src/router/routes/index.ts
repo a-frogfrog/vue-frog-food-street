@@ -4,6 +4,7 @@ import mine from './modules/mine';
 import search from './modules/search';
 import order from './modules/order';
 import auth from './modules/auth';
+import cart from './modules/cart';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -11,7 +12,7 @@ const routes: RouteRecordRaw[] = [
     name: 'root',
     redirect: '/home',
     component: () => import('#/layouts/Basic.vue'),
-    children: [home, mine, search, order],
+    children: [home, mine, search, order, cart],
     meta: {
       isAuth: true,
     },

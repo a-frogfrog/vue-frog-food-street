@@ -10,8 +10,7 @@ export const beforeEach: NavigationGuardWithThis<undefined> = (to: any) => {
   if (!_auth.getToken()) {
     return '/auth/login';
   }
-  // 获取token
-  console.log(to.meta.isAuth);
+  return true;
 };
 
 export const afterEach: NavigationHookAfter = (): void => {};

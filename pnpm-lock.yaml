@@ -288,23 +288,9 @@ importers:
         specifier: catalog:frontend
         version: 2.10.4(vue@3.5.18(typescript@5.8.3))
 
-  internal/tailwind-config:
-    devDependencies:
-      autoprefixer:
-        specifier: catalog:style
-        version: 10.4.21(postcss@8.5.6)
-      postcss:
-        specifier: catalog:style
-        version: 8.5.6
-      tailwindcss:
-        specifier: catalog:style
-        version: 4.1.11
+  internal/tailwind-config: {}
 
-  internal/vite-config:
-    dependencies:
-      '@frog/icons':
-        specifier: workspace:*
-        version: link:../../packages/icons
+  internal/vite-config: {}
 
   packages/directives: {}
 
@@ -331,8 +317,6 @@ importers:
   packages/hooks: {}
 
   packages/icons: {}
-
-  packages/types: {}
 
   packages/utils: {}
 

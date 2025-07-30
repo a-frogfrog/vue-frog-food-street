@@ -10,7 +10,7 @@ defineEmits(['update:modelValue']);
       @input="
         $emit('update:modelValue', ($event.target as HTMLInputElement).value)
       "
-      class="w-full !border-none font-inter bg-[#F6F6F6] h-full block !py-4 outline-0"
+      class="w-full caret-blue-600 !border-none font-inter bg-[#F6F6F6] h-full block !py-4 outline-0"
     />
   </div>
 </template>

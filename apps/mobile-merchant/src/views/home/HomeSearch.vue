@@ -23,7 +23,7 @@ const { handleSearch } = useSearch();
   <div>
     <div class="h-48">
       <img
-        class="h-48 object-cover w-full"
+        class="h-48 object-cover w-full border-transparent"
         src="/imgs/background/welcome.webp"
         alt=""
       />
@@ -31,7 +31,7 @@ const { handleSearch } = useSearch();
     <div class="-translate-y-6 w-full !px-5">
       <input
         placeholder="搜索商品"
-        class="bg-white outline-0 border-0 h-14 shadow-lg rounded-md w-full"
+        class="dark:bg-[#1A1A1A] dark:text-white bg-white !border-transparent outline-0 !border-0 h-14 shadow-lg rounded-md w-full"
         type="text"
         @focus="handleSearch"
       />

@@ -38,9 +38,7 @@ const { promotionItems } = useFrostedPicture();
 <template>
   <div>
     <div class="!p-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold mb-4">
-        HOT 热门活动
-      </h1>
+      <h1 class="text-2xl font-bold mb-4 dark:text-white">HOT 热门活动</h1>
       <Icon :size="14">
         <MoreIcon />
       </Icon>

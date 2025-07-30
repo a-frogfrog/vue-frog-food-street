@@ -10,10 +10,14 @@ const { tabBarPage, active, item, handleClick } = useTabBar();
   <Page>
     <template #tabBar v-if="tabBarPage">
       <TabBar
+        class="dark:bg-[rgba(255,255,255,0.1)] dark:text-[#E9E9E9]"
         v-model:active="active"
         :items="item.items"
         @tab-bar-item-click="handleClick"
       />
+    </template>
+    <template #>
+      <SideNavigation />
     </template>
   </Page>
 </template>

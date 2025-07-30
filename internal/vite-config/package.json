@@ -8,8 +8,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
-  "dependencies": {
-    "@frog/icons": "workspace:*"
-  }
+  "type": "module"
 }

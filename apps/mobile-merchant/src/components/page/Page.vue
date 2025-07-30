@@ -6,11 +6,14 @@
 
 <template>
   <div
-    class="h-screen overflow-x-hidden overflow-y-auto"
+    class="h-screen overflow-x-hidden overflow-y-auto dark:bg-[#000000]"
     style="scrollbar-width: none"
   >
     <div>
       <slot name="topNavigationBar"></slot>
+    </div>
+    <div>
+      <slot name="sideNavigation"></slot>
     </div>
     <div class="!pb-10">
       <slot name="main">
