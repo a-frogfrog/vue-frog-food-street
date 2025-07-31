@@ -4,7 +4,10 @@ type ThemeType = 'light' | 'dark' | 'system';
 const ThemeKey = '__theme__';
 
 function getTheme() {
-  return localStorage.getItem(ThemeKey) as ThemeType;
+  return localStorage.getItem(ThemeKey) ||
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light';
 }
 
 export function useTheme() {

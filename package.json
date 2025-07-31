@@ -61,6 +61,7 @@
     "@tailwindcss/vite": "catalog:build",
     "@vue/shared": "catalog:prod",
     "axios": "catalog:network",
+    "element-plus": "^2.10.4",
     "js-cookie": "catalog:prod",
     "nprogress": "catalog:frontend",
     "pinia": "catalog:frontend",

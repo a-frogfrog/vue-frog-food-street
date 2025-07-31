@@ -1,5 +1,1 @@
-import { tailwindConfig } from '@frog/tailwind-config';
-
-export default {
-  presets: [tailwindConfig],
-};
+export { default } from '@frog/tailwind-config';

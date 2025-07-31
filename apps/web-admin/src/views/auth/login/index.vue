@@ -5,7 +5,7 @@ import { Input, InputPassword, Button, Divider } from 'ant-design-vue';
 import { PhoneFilled, WechatOutlined } from '@ant-design/icons-vue';
 import type { LoginRequest } from '#/types';
 import { useAuthStore } from '#/stores';
-import { useLoading } from '#/hooks';
+import { useLoading } from '@frog/hooks';
 import { message } from 'ant-design-vue';
 
 const router = useRouter();

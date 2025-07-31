@@ -7,13 +7,13 @@
 <template>
   <div
     role="page"
-    class="h-screen overflow-x-hidden overflow-y-auto dark:bg-[#000000]"
+    class="relative h-screen dark:bg-[#000000] "
     style="scrollbar-width: none"
   >
-    <div role="sideNavigation">
+    <div role="sideNavigation" class="min-h-10">
       <slot name="sideNavigation"></slot>
     </div>
-    <div role="main" class="!pb-10">
+    <div role="main" class="h-full overflow-x-hidden overflow-y-auto">
       <slot name="main">
         <RouterView v-slot="{ Component }">
           <Transition name="slide-fade" mode="out-in">
@@ -22,7 +22,10 @@
         </RouterView>
       </slot>
     </div>
-    <div role="tabBar">
+    <div role="shoppingCart">
+      <slot name="shoppingCart"></slot>
+    </div>
+    <div role="tabBar" class="absolute bottom-0 w-full min-h-14">
       <slot name="tabBar"></slot>
     </div>
   </div>

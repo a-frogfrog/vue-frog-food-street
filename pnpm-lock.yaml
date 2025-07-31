@@ -129,6 +129,9 @@ importers:
       axios:
         specifier: catalog:network
         version: 1.11.0
+      element-plus:
+        specifier: ^2.10.4
+        version: 2.10.4(vue@3.5.18(typescript@5.8.3))
       js-cookie:
         specifier: catalog:prod
         version: 3.0.5
@@ -228,7 +231,7 @@ importers:
         version: link:../../packages/effects/events
       '@frog/hooks':
         specifier: workspace:*
-        version: link:../../packages/hooks
+        version: link:../../packages/effects/hooks
       '@frog/icons':
         specifier: workspace:*
         version: link:../../packages/icons
@@ -253,7 +256,7 @@ importers:
         version: link:../../packages/effects/common-ui
       '@frog/hooks':
         specifier: workspace:*
-        version: link:../../packages/hooks
+        version: link:../../packages/effects/hooks
       '@frog/styles':
         specifier: workspace:*
         version: link:../../packages/effects/styles
@@ -277,7 +280,7 @@ importers:
         version: link:../../packages/effects/events
       '@frog/hooks':
         specifier: workspace:*
-        version: link:../../packages/hooks
+        version: link:../../packages/effects/hooks
       '@frog/request':
         specifier: workspace:*
         version: link:../../packages/effects/request
@@ -308,13 +311,13 @@ importers:
 
   packages/effects/events: {}
 
+  packages/effects/hooks: {}
+
   packages/effects/request: {}
 
   packages/effects/styles: {}
 
   packages/effects/types: {}
-
-  packages/hooks: {}
 
   packages/icons: {}
 

@@ -2,12 +2,9 @@
 /**
  * @description 商品列表
  */
-
-import { FrogButton } from '@frog/common-ui';
 </script>
 <template>
   <div class="!p-4">
-    <FrogButton>23423</FrogButton>
     <div>
       <h1 class="text-2xl font-bold mb-4 dark:text-[#E9E9E9]">商品列表</h1>
     </div>
