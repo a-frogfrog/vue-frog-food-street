@@ -1,1 +1,1 @@
-// export { default } from '@frog/tailwind-config';
+export { default } from '@frog/tailwind-config';

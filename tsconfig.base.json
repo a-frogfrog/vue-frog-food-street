@@ -1,25 +1,45 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  // "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "exclude": ["**/node_modules/**", "**/dist/**"],
-  "include": ["packages/**/*.ts", "packages/**/*.tsx", "packages/**/*.vue"],
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
     "lib": ["ESNext", "DOM"],
-    "moduleResolution": "Node",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    // "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
+    "moduleResolution": "bundler",
+    "baseUrl": ".", // 方便 paths 配置
+    "paths": {
+      "@frog/*": ["packages/*/src"], // monorepo 包内互相引用
+      "@internal/*": ["internal/*/src"]
+    },
+
+    // 输出目录（一般由各子包 tsconfig 继承后覆盖）
+    "outDir": "dist",
+
+    // 严格性与类型检查
     "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+
+    // 兼容性与性能
+    "esModuleInterop": true,
+    "skipLibCheck": true, // 跳过 node_modules 类型检查，加快编译
+
+    // 只做类型检查，不输出 js
     "noEmit": true,
-    "outDir": "dist"
+
+    // 支持 .vue 文件类型（需配合 vue-tsc 或 volar 插件）
+    "allowJs": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true, // 支持单文件编译（Vite 推荐）
+
+    "types": ["vite/client"], // 如果用 Vite，可开启
+    "include": ["packages/**/*", "apps/**/*", "internal/**/*"],
+    "exclude": ["**/node_modules/**", "**/dist/**"]
   }
 }

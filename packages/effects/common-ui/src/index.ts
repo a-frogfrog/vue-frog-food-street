@@ -1,4 +1,4 @@
-import '@frog/tailwind-config';
+// import '@frog/tailwind-config/css';
 export * from './tabbar';
 export * from './content';
 export * from './modal';

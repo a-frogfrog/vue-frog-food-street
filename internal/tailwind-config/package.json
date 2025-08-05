@@ -2,9 +2,23 @@
   "name": "@frog/tailwind-config",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
-  "types": "index.ts",
   "author": "",
   "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --build",
+    "dev": "tsc --watch --project tsconfig.json"
+  },
+  "main": "index.ts",
+  "module": "index.ts",
+  "exports": {
+    ".": {
+      "import": "./index.ts"
+    },
+    "./css": {
+      "import": "./tailwind.css",
+      "default": "./tailwind.css"
+    }
+  },
   "packageManager": "pnpm@10.11.0"
 }

@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "moduleResolution": "bundler",
+    "outDir": "./dist"
+  },
+
+  "exclude": ["node_modules", "dist"],
+  "include": ["./**/*.ts", "./**/*.d.ts", "./**/*.css", "./**/*.json"]
+}

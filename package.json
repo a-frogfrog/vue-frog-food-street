@@ -10,7 +10,6 @@
     "internal/*"
   ],
   "scripts": {
-    "build": "pnpm -r run build",
     "build:a": "pnpm -r --filter web-admin run build",
     "build:s": "pnpm -r --filter mobile-supplier run build",
     "build:m": "pnpm -r --filter mobile-merchant run build",
