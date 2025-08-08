@@ -1,4 +1,4 @@
-import { RouteRecordRaw } from 'vue-router';
+import type { RouteRecordRaw } from 'vue-router';
 import home from './modules/home';
 import mine from './modules/mine';
 import search from './modules/search';

@@ -12,14 +12,14 @@ import {
   useSideNavigation,
 } from '#/components';
 
-const { tabBarPage } = useTabBar();
+const { tabBarPage, items } = useTabBar();
 const { isShow } = useSideNavigation();
 </script>
 
 <template>
   <Page>
     <template #tabBar v-if="tabBarPage">
-      <TabBar />
+      <TabBar :items="items"> </TabBar>
     </template>
     <template #sideNavigation>
       <SideNavigation :show="isShow" />

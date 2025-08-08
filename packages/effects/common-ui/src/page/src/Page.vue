@@ -7,10 +7,10 @@
 <template>
   <div
     role="page"
-    class="relative h-screen dark:bg-[#000000] "
+    class="relative h-screen dark:bg-[#000000] bg-[#f5f5f5]"
     style="scrollbar-width: none"
   >
-    <div role="sideNavigation" class="min-h-10">
+    <div role="sideNavigation">
       <slot name="sideNavigation"></slot>
     </div>
     <div role="main" class="h-full overflow-x-hidden overflow-y-auto">
@@ -25,7 +25,7 @@
     <div role="shoppingCart">
       <slot name="shoppingCart"></slot>
     </div>
-    <div role="tabBar" class="absolute bottom-0 w-full min-h-14">
+    <div role="tabBar" class="absolute bottom-0 w-full">
       <slot name="tabBar"></slot>
     </div>
   </div>

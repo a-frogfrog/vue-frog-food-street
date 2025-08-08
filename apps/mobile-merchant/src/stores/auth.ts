@@ -4,7 +4,7 @@
  */
 
 import { defineStore } from 'pinia';
-import { authApi, AuthApi } from '#/api';
+import { authApi, type AuthApi } from '#/api';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useToken, useLoading } from '@frog/hooks';

@@ -9,16 +9,7 @@
     "build": "tsc --build",
     "dev": "tsc --watch --project tsconfig.json"
   },
-  "main": "index.ts",
-  "module": "index.ts",
-  "exports": {
-    ".": {
-      "import": "./index.ts"
-    },
-    "./css": {
-      "import": "./tailwind.css",
-      "default": "./tailwind.css"
-    }
-  },
+  "main": "src/index.ts",
+  "module": "src/index.ts",
   "packageManager": "pnpm@10.11.0"
 }

@@ -1,4 +1,4 @@
-import { NavigationGuardWithThis, NavigationHookAfter } from 'vue-router';
+import type { NavigationGuardWithThis, NavigationHookAfter } from 'vue-router';
 import { useAuthStore } from '#/stores';
 
 export const beforeEach: NavigationGuardWithThis<undefined> = (to: any) => {
