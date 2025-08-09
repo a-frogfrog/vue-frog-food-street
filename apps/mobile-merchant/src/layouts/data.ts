@@ -1,11 +1,17 @@
-import { ref } from 'vue';
-import { useRoute } from 'vue-router';
-import { HomeIcon } from '@frog/icons';
+import { ref, watchEffect } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+import { HomeIcon, ShoppingCart, Mine, Order } from '@frog/icons';
 
 export function useTabBar() {
   const route = useRoute();
-  const active = ref(route.name?.toString());
-  const tabBarPage = ref<boolean>(route.meta?.tabBarPage as boolean);
+  const router = useRouter();
+  const active = ref('');
+  const tabBarPage = ref(false);
+
+  watchEffect(() => {
+    active.value = route.name?.toString() || '';
+    tabBarPage.value = route.meta?.tabBarPage as boolean;
+  });
 
   const items = [
     {
@@ -15,31 +21,32 @@ export function useTabBar() {
     },
     {
       name: 'order',
-      icon: 'iconfont icon-_shiyongcishu',
+      icon: Order,
       label: '订单',
     },
     {
       name: 'cart',
-      icon: 'iconfont icon-gouwuche',
+      icon: ShoppingCart,
       label: '购物车',
     },
     {
       name: 'mine',
-      icon: 'iconfont icon-wode',
+      icon: Mine,
       label: '我的',
       cover:
         'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-1.png',
     },
   ];
 
-  function handleClick(name: string) {
+  const handleChange = (name: string) => {
     active.value = name;
-  }
+    router.push(name);
+  };
 
   return {
     active,
     items,
-    handleClick,
+    handleChange,
     tabBarPage,
   };
 }

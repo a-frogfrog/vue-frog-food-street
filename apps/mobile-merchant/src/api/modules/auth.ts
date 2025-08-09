@@ -13,9 +13,6 @@ export namespace AuthApi {
 
 export const authApi = {
   login(params: AuthApi.loginParams) {
-    return requestClient.post('/auth/login', {
-      account: '19353464797',
-      password: '123456',
-    });
+    return requestClient.post('/auth/login', params);
   },
 };

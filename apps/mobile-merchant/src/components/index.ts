@@ -11,3 +11,4 @@ export * from './tabbar';
 export { default as Input } from './input/Input.vue';
 export { default as TopNavigationBarItems } from './top-navigation-bar-items/TopNavigationBarItems.vue';
 export { default as ShoppingCart } from './shopping-cart/ShoppingCart.vue';
+export * from './page';

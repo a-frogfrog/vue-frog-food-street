@@ -32,7 +32,7 @@ const isViewPort = (el: HTMLElement) => {
 };
 
 export const vSlideIn = {
-  mounted(el: HTMLElement, binding: any) {
+  mounted(el: HTMLElement) {
     if (!isViewPort(el)) {
       return;
     }

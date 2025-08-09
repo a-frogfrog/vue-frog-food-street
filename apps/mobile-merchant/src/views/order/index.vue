@@ -2,7 +2,6 @@
 import { useOrderItems } from './data';
 import OrderItem from './OrderItem.vue';
 import OrderProductItem from './OrderProductItem.vue';
-import { TopNavigationBar } from '#/components';
 import { vSlideIn } from '@frog/directives';
 
 const { orderItems } = useOrderItems();
@@ -10,7 +9,6 @@ const { orderItems } = useOrderItems();
 
 <template>
   <div>
-    <TopNavigationBar />
     <div class="!p-4">
       <OrderItem
         v-slideIn

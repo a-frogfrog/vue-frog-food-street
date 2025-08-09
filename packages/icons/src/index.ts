@@ -8,3 +8,5 @@ export { default as MonsterIcon } from './components/monster-icon.vue';
 export { default as BarIcon } from './components/barIcon.vue';
 export { default as SettingIcon } from './components/settingIcon.vue';
 export { default as ShoppingCart } from './components/ShoppingCart.vue';
+export { default as Mine } from './components/Mine.vue';
+export { default as Order } from './components/Order.vue';

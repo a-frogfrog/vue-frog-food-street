@@ -1,36 +1,55 @@
 <script setup lang="ts">
-import type { TabBarProps } from './types';
+import { computed } from 'vue';
+import {
+  type TabBarProps,
+  type TabBarEmits,
+  TAB_BAR_ITEM_SIZE,
+} from './constants';
 import { Icon } from '@frog/icons';
 
 const props = defineProps<TabBarProps>();
-function useTabBar() {
-  const getSize = () => {
-    return props.size || 24;
-  };
+const emit = defineEmits<TabBarEmits>();
 
-  return {
-    getSize,
-  };
-}
-const { getSize } = useTabBar();
+const handleClick = (name: string) => {
+  emit('change', name);
+};
+
+const isActive = (name: string) => {
+  return props.active === name;
+};
+
+const getSize = computed(() => {
+  return props.size || TAB_BAR_ITEM_SIZE;
+});
 </script>
 
 <template>
   <div
-    class="tabbar-filter dark:backdrop-brightness-50 dark:text-white !px-2 !pt-2 flex justify-around items-center !py-4"
+    class="tabbar-filter dark:backdrop-brightness-50 shadow-2xl dark:text-white flex justify-around items-center h-full !p-2 !px-4 !pt-3 relative"
   >
-    <template v-for="item in props.items">
-      <div v-if="typeof item.icon === 'string'">
-        <Icon>
-          <i :class="item.icon" :style="{ fontSize: getSize() }"></i>
-        </Icon>
-      </div>
-      <div v-else>
-        <Icon :size="getSize()">
-          <Component :is="item.icon" />
-        </Icon>
-      </div>
-    </template>
+    <div
+      :style="{
+        backgroundColor: isActive(item.name)
+          ? props.activeColor || '#E0CFFE'
+          : 'transparent',
+      }"
+      :class="[isActive(item.name) ? 'scale-110' : '']"
+      @click="handleClick(item.name)"
+      v-for="item in props.items"
+      :key="item.name"
+      class="flex-1 z-10 h-full w-full flex justify-center !py-1.5 rounded-md duration-200 origin-bottom"
+    >
+      <img
+        v-if="item.cover"
+        :src="item.cover"
+        :alt="item.label"
+        :style="{ width: `${getSize}px`, height: `${getSize}px` }"
+        class="rounded-full object-cover scale-125"
+      />
+      <Icon v-else :size="24">
+        <Component ref="tabBarItemIcon" :is="item.icon" />
+      </Icon>
+    </div>
   </div>
 </template>
 

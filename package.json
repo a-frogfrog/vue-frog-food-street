@@ -17,6 +17,9 @@
     "dev:a": "pnpm -r --filter web-admin run dev",
     "dev:s": "pnpm -r --filter mobile-supplier run dev",
     "dev:m": "pnpm -r --filter mobile-merchant run dev",
+    "preview:a": "pnpm -r --filter web-admin run preview",
+    "preview:s": "pnpm -r --filter mobile-supplier run preview",
+    "preview:m": "pnpm -r --filter mobile-merchant run preview",
     "test": "pnpm -r run test",
     "lint": "pnpm dlx eslint .",
     "catalog": "pnpm dlx pact migrate"

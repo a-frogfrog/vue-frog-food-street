@@ -1,9 +1,10 @@
 const cart = {
   path: 'cart',
-  name: 'Cart',
+  name: 'cart',
   component: () => import('#/views/cart/Index.vue'),
   meta: {
     title: '购物车',
+    tabBarPage: true,
   },
 };
 

@@ -1,8 +1,8 @@
 type EventMap = {
-  "api:unauthorized": [];
-  "progress:start": [];
-  "progress:finish": [];
-  "network:offline": [];
+  'api:unauthorized': [];
+  'progress:start': [];
+  'progress:finish': [];
+  'network:offline': [];
 };
 
 class EventEmitter<Events extends Record<string, any[]>> {

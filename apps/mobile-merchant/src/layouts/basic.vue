@@ -3,26 +3,36 @@
  * @description 基础布局组件
  */
 
-import { Page } from '@frog/common-ui';
+import { Page } from '#/components';
 import { useTabBar } from './data';
 import {
   TabBar,
-  SideNavigation,
   ShoppingCart,
-  useSideNavigation,
+  TopNavigationBar,
+  TopNavigationBarItems,
 } from '#/components';
 
-const { tabBarPage, items } = useTabBar();
-const { isShow } = useSideNavigation();
+const { tabBarPage, items, active, handleChange } = useTabBar();
 </script>
 
 <template>
   <Page>
-    <template #tabBar v-if="tabBarPage">
-      <TabBar :items="items"> </TabBar>
+    <template #topNavigation>
+      <TopNavigationBar>
+        <template #items>
+          <TopNavigationBarItems />
+        </template>
+      </TopNavigationBar>
     </template>
-    <template #sideNavigation>
-      <SideNavigation :show="isShow" />
+    <template #main>
+      <RouterView v-slot="{ Component }">
+        <Transition name="slide-fade" mode="out-in">
+          <Component :is="Component"></Component>
+        </Transition>
+      </RouterView>
+    </template>
+    <template #tabBar v-if="tabBarPage">
+      <TabBar :active="active" :items="items" @change="handleChange" />
     </template>
     <template #shoppingCart>
       <ShoppingCart />

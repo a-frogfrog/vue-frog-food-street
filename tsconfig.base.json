@@ -38,8 +38,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true, // 支持单文件编译（Vite 推荐）
 
-    "types": ["vite/client"], // 如果用 Vite，可开启
-    "include": ["packages/**/*", "apps/**/*", "internal/**/*"],
-    "exclude": ["**/node_modules/**", "**/dist/**"]
-  }
+    "types": ["vite/client"] // 如果用 Vite，可开启
+  },
+  "include": ["packages/**/*", "apps/**/*", "internal/**/*"],
+  "exclude": ["**/node_modules/**", "**/dist/**"]
 }
