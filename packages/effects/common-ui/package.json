@@ -10,8 +10,8 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "build": "vite build && vue-tsc --noEmit false",
-    "typecheck": "vue - tsc --noEmit"
+    "build": "pnpm unbuild",
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
     "@frog/icons": "workspace:*"

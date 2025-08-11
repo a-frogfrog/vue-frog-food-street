@@ -26,15 +26,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/a-frogfrog/frog-monorepo.git"
+    "url": "git+https://github.com/a-frogfrog/vue-frog-food-street.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/a-frogfrog/frog-monorepo/issues"
+    "url": "https://github.com/a-frogfrog/vue-frog-food-street/issues"
   },
-  "homepage": "https://github.com/a-frogfrog/frog-monorepo#readme",
+  "homepage": "https://github.com/a-frogfrog/vue-frog-food-street#readme",
   "devDependencies": {
     "@frog/types": "workspace:*",
     "@tailwindcss/postcss": "catalog:style",
@@ -53,6 +53,8 @@
     "tailwindcss": "catalog:style",
     "turbo": "catalog:monorepo",
     "typescript": "catalog:dev",
+    "unbuild": "^3.6.0",
+    "unplugin-vue": "^7.0.1",
     "vite": "catalog:build",
     "vite-plugin-dts": "catalog:build",
     "vite-plugin-inspect": "catalog:build",

@@ -1,11 +1,11 @@
 const home = {
   path: 'home',
   name: 'home',
-  component: () => import('#/views/home/Index.vue'),
+  component: () => import('#/views/_tabbar/home/Index.vue'),
   meta: {
     title: '首页',
     tabBarPage: true,
-    topBar: true,
+    topBarPage: true,
   },
 };
 

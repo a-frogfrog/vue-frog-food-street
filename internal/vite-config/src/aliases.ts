@@ -13,4 +13,3 @@ const aliases = {
 };
 
 export const viteAliases = aliases;
-

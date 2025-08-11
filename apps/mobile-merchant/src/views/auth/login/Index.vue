@@ -2,9 +2,9 @@
 /**
  * @description 登录
  */
-import LoginCover from './LoginCover.vue';
-import LoginForm from './LoginForm.vue';
-import LoginFooter from './LoginFooter.vue';
+import LoginCover from './modules/LoginCover.vue';
+import LoginForm from './modules/LoginForm.vue';
+import LoginFooter from './modules/LoginFooter.vue';
 </script>
 <template>
   <div>

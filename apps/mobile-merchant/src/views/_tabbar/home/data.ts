@@ -2,12 +2,14 @@
  *
  * @description: 首页视图组件数据
  */
+import { reactive } from 'vue';
+import { useRouter } from 'vue-router';
 
 export function useProductData() {
   const ProductItems = [
     {
       id: '1',
-      name: '阳澄湖大闸蟹',
+      productName: '阳澄湖大闸蟹',
       price: 100.99,
       img: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-1.png',
       isOfficial: true,
@@ -16,7 +18,7 @@ export function useProductData() {
     },
     {
       id: '2',
-      name: '日本5A和牛',
+      productName: '日本5A和牛',
       price: 642.22,
       img: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-2.png',
       isOfficial: false,
@@ -25,7 +27,7 @@ export function useProductData() {
     },
     {
       id: '3',
-      name: '澳洲进口牛肉',
+      productName: '澳洲进口牛肉',
       price: 300.0,
       img: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-1.png',
       isOfficial: true,
@@ -34,7 +36,7 @@ export function useProductData() {
     },
     {
       id: '4',
-      name: '新西兰进口羊肉',
+      productName: '新西兰进口羊肉',
       price: 200.0,
       img: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/assets/avatar-4-x_MPl8Kx.png',
       isOfficial: false,
@@ -43,7 +45,7 @@ export function useProductData() {
     },
     {
       id: '5',
-      name: '泰国进口榴莲',
+      productName: '泰国进口榴莲',
       price: 100.0,
       img: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/assets/avatar-7-C5t2Bw3B.png',
       isOfficial: false,
@@ -98,5 +100,27 @@ export function useSupplierData() {
 
   return {
     supplierItems,
+  };
+}
+
+export function useHomeHandler() {
+  const router = useRouter();
+  const popup = reactive({
+    show: false,
+    id: '',
+  });
+  const handleAvatarClick = (id: string) => {
+    router.push(`/supplier/home/${id}`);
+  };
+
+  const handleProductClick = (id: string) => {
+    popup.show = true;
+    popup.id = id;
+  };
+
+  return {
+    popup,
+    handleAvatarClick,
+    handleProductClick,
   };
 }

@@ -1,9 +1,4 @@
-type EventMap = {
-  'api:unauthorized': [];
-  'progress:start': [];
-  'progress:finish': [];
-  'network:offline': [];
-};
+import type { EventMap } from './eventList';
 
 class EventEmitter<Events extends Record<string, any[]>> {
   private _listeners: {

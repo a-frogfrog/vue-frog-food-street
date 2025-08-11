@@ -2,8 +2,9 @@ import 'vue-router';
 
 declare module 'vue-router' {
   interface RouteMeta {
-    tabBarPage: boolean;
+    tabBarPage?: boolean;
+    topBarPage?: boolean;
     title: string;
-    isAuth: boolean;
+    isAuth?: boolean;
   }
 }

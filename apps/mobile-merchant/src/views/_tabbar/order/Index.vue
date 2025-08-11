@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useOrderItems } from './data';
-import OrderItem from './OrderItem.vue';
-import OrderProductItem from './OrderProductItem.vue';
+import OrderItem from './modules/OrderItem.vue';
+import OrderProductItem from './modules/OrderProductItem.vue';
 import { vSlideIn } from '@frog/directives';
 
 const { orderItems } = useOrderItems();

@@ -50,3 +50,33 @@ export function useTabBar() {
     tabBarPage,
   };
 }
+
+export function useTopNavigation() {
+  const router = useRouter();
+  const route = useRoute();
+  const topBarPage = ref(false);
+
+  watchEffect(() => {
+    topBarPage.value = route.meta?.topBarPage as boolean;
+  });
+
+  const handleBarClick = () => {
+    router.push('/side');
+    console.log('bar');
+  };
+
+  const handleCartClick = () => {
+    console.log('cart');
+  };
+
+  const handleSettingClick = () => {
+    console.log('setting');
+  };
+
+  return {
+    topBarPage,
+    handleBarClick,
+    handleCartClick,
+    handleSettingClick,
+  };
+}

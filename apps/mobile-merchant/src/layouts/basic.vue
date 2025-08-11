@@ -4,7 +4,7 @@
  */
 
 import { Page } from '#/components';
-import { useTabBar } from './data';
+import { useTabBar, useTopNavigation } from './data';
 import {
   TabBar,
   ShoppingCart,
@@ -13,21 +13,27 @@ import {
 } from '#/components';
 
 const { tabBarPage, items, active, handleChange } = useTabBar();
+const { topBarPage, handleBarClick, handleCartClick, handleSettingClick } =
+  useTopNavigation();
 </script>
 
 <template>
   <Page>
-    <template #topNavigation>
+    <template #topNavigation v-if="topBarPage">
       <TopNavigationBar>
         <template #items>
-          <TopNavigationBarItems />
+          <TopNavigationBarItems
+            @barClick="handleBarClick"
+            @cartClick="handleCartClick"
+            @settingClick="handleSettingClick"
+          />
         </template>
       </TopNavigationBar>
     </template>
     <template #main>
       <RouterView v-slot="{ Component }">
         <Transition name="slide-fade" mode="out-in">
-          <Component :is="Component"></Component>
+          <Component :is="Component" />
         </Transition>
       </RouterView>
     </template>

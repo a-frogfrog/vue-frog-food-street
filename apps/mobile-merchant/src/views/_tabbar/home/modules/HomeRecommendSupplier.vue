@@ -4,8 +4,9 @@
  */
 
 import { ScrollHorizontally, SupplierAvatar } from '#/components';
-import { useSupplierData } from './data';
+import { useSupplierData, useHomeHandler } from '../data';
 
+const { handleAvatarClick } = useHomeHandler();
 const { supplierItems } = useSupplierData();
 </script>
 
@@ -13,11 +14,9 @@ const { supplierItems } = useSupplierData();
   <ScrollHorizontally>
     <template #content>
       <div class="flex gap-4 !px-4">
-        <template
-          v-for="item in supplierItems"
-          :key="item"
-        >
+        <template v-for="item in supplierItems" :key="item">
           <SupplierAvatar
+            @click="handleAvatarClick(item.id)"
             :src="item.src"
             :name="item.name"
           />

@@ -1,7 +1,7 @@
 const mine = {
   path: 'mine',
   name: 'mine',
-  component: () => import('#/views/mine/Index.vue'),
+  component: () => import('#/views/_tabbar/mine/Index.vue'),
   meta: {
     title: '我的',
     tabBarPage: true,

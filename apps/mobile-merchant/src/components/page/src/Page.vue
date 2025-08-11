@@ -14,7 +14,7 @@
     </div>
     <div
       role="main"
-      class="h-full overflow-y-auto !pb-[50px]"
+      class="h-full overflow-y-auto overflow-x-hidden"
       style="scrollbar-width: none"
     >
       <slot name="main"></slot>

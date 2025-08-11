@@ -1,4 +1,3 @@
-import './tailwind.css';
 export * from './tabbar';
 export * from './content';
 export * from './modal';

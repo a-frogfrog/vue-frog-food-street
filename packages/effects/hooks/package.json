@@ -8,5 +8,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "imports": {
+    "@frog/hooks/*": "./src/index.ts"
+  }
 }
