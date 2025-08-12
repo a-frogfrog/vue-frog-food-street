@@ -1,4 +1,9 @@
-import type { AxiosResponse } from 'axios';
+import type { AxiosInstance, AxiosResponse } from 'axios';
+
+export function setupInterceptors(instance: AxiosInstance) {
+  instance.interceptors.request.use(handleRequest, handleRequestError);
+  instance.interceptors.response.use(handleResponse, handleResponseError);
+}
 
 export const handleResponse = (response: AxiosResponse) => {
   return { ...response.data, isSucceed: true };

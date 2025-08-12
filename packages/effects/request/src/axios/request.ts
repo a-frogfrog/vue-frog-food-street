@@ -1,10 +1,5 @@
 import axios from 'axios';
-import {
-  handleRequest,
-  handleRequestError,
-  handleResponse,
-  handleResponseError,
-} from './interceptors';
+import { setupInterceptors } from './interceptors';
 /**
  * @description 创建基础请求实例
  */
@@ -21,9 +16,8 @@ export function createRequest(baseOptions: BaseRequestOptions) {
     timeout: baseOptions.timeout,
     headers: baseOptions.headers,
   });
-
-  instance.interceptors.request.use(handleRequest, handleRequestError);
-  instance.interceptors.response.use(handleResponse, handleResponseError);
+  // 设置请求和响应拦截器
+  setupInterceptors(instance);
 
   const requestClient = {
     get: (url: string, params?: {}): any => {

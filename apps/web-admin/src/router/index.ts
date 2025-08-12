@@ -1,7 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import routes from "./routes";
-import guard from "./handle/guard";
-import "./handle/event";
+import guard from "./handler/guard";
+import "./handler/event";
 
 const router = createRouter({
   history: createWebHistory(),

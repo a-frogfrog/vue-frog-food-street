@@ -27,7 +27,7 @@ const { handleProductClick, popup } = useHomeHandler();
           v-slideIn
           v-for="item in ProductItems"
           :item="item"
-          :key="item.id"
+          :key="item.id"  
         />
       </template>
     </HomeProductList>

@@ -2,6 +2,7 @@
  *
  * @description: 首页视图组件数据
  */
+import { supplierApi, type SupplierApi } from '#/api';
 import { reactive } from 'vue';
 import { useRouter } from 'vue-router';
 
@@ -11,7 +12,7 @@ export function useProductData() {
       id: '1',
       productName: '阳澄湖大闸蟹',
       price: 100.99,
-      img: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-1.png',
+      img: 'https://th.bing.com/th/id/R.a7b488ddd064ccd3bada696afe47dade?rik=H%2bKq3MvqmwtJWw&riu=http%3a%2f%2fwww.szdzx.com%2fuploads%2fallimg%2f190624%2f1-1Z624134305928.JPG&ehk=%2bLI%2fCPq4VbtwRnvcF41n7j7rJzzr828DGwiU28Y4%2fsc%3d&risl=&pid=ImgRaw&r=0',
       isOfficial: true,
       sold: 10,
       stock: 100,
@@ -20,7 +21,7 @@ export function useProductData() {
       id: '2',
       productName: '日本5A和牛',
       price: 642.22,
-      img: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-2.png',
+      img: 'https://ufoodin.com/storage/2023/03/6-1024x1024.jpg',
       isOfficial: false,
       sold: 20,
       stock: 200,
@@ -29,7 +30,7 @@ export function useProductData() {
       id: '3',
       productName: '澳洲进口牛肉',
       price: 300.0,
-      img: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-1.png',
+      img: 'https://img.alicdn.com/i1/2208757843361/O1CN01bXtweA1ahO28Pui9b_!!2208757843361.jpg',
       isOfficial: true,
       sold: 30,
       stock: 300,
@@ -38,7 +39,7 @@ export function useProductData() {
       id: '4',
       productName: '新西兰进口羊肉',
       price: 200.0,
-      img: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/assets/avatar-4-x_MPl8Kx.png',
+      img: 'https://tse2.mm.bing.net/th/id/OIP.ZxVhRVjR_z4ow_FT-oXvjwAAAA?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3',
       isOfficial: false,
       sold: 40,
       stock: 400,
@@ -47,7 +48,7 @@ export function useProductData() {
       id: '5',
       productName: '泰国进口榴莲',
       price: 100.0,
-      img: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/assets/avatar-7-C5t2Bw3B.png',
+      img: 'https://m.360buyimg.com/mobilecms/s750x750_jfs/t20326/71/2290914297/294572/d327aa92/5b51bf63Na3aa0385.jpg!q80.dpg',
       isOfficial: false,
       sold: 40,
       stock: 400,
@@ -59,45 +60,15 @@ export function useProductData() {
 }
 
 export function useSupplierData() {
-  const supplierItems = [
-    {
-      id: '1',
-      name: '鸡脖子供应商',
-      address: '北京市朝阳区',
-      phone: '12345678901',
-      email: 'supplier1@example.com',
-      contact: '张三',
-      src: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-1.png',
-    },
-    {
-      id: '2',
-      name: '黄记鸡鸡店',
-      address: '上海市浦东新区',
-      phone: '12345678902',
-      email: 'supplier2@example.com',
-      contact: '李四',
-      src: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-2.png',
-    },
-    {
-      id: '3',
-      name: '王五家牛肉',
-      address: '广州市天河区',
-      phone: '12345678903',
-      email: 'supplier3@example.com',
-      contact: '王五',
-      src: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/assets/avatar-4-x_MPl8Kx.png',
-    },
-    {
-      id: '4',
-      name: '赵六的猪肉店',
-      address: '深圳市南山区',
-      phone: '12345678904',
-      email: 'supplier4@example.com',
-      contact: '赵六',
-      src: 'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/assets/avatar-7-C5t2Bw3B.png',
-    },
-  ];
+  const supplierItems = reactive<SupplierApi.Supplier[]>([]);
 
+  const getSupplierData = async () => {
+    const response = await supplierApi.fetchRecommendSupplier();
+    if (response.isSuccess && response.data) {
+      supplierItems.push(...response.data);
+    }
+  };
+  getSupplierData();
   return {
     supplierItems,
   };
