@@ -8,6 +8,7 @@
     "nprogress",
     "pinia",
     "vant",
-    "iconfont"
+    "iconfont",
+    "@custom-variant"
   ]
 }

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Page, Content, TabBar, ToolBar } from '@frog/common-ui';
-import { ToolBarPopup } from '#/components';
+import { Page, Content } from '@frog/common-ui';
+import { ToolBarPopup, TabBar } from '#/components';
 import { useTabBar } from './hooks/use-tabbar';
 import { useToolBar } from './hooks/use-toolbar';
 
@@ -13,19 +13,10 @@ const { isShow, title, handleToolBarClick } = useToolBar();
     <template #popup>
       <ToolBarPopup v-model:show="isShow" />
     </template>
-    <template
-      v-if="isTabBar"
-      #toolbar
-    >
-      <ToolBar
-        :title="title"
-        @tool-bar-click="handleToolBarClick"
-      />
+    <template v-if="isTabBar" #toolbar>
+      <ToolBar :title="title" @tool-bar-click="handleToolBarClick" />
     </template>
-    <template
-      v-if="isTabBar"
-      #tabbar
-    >
+    <template v-if="isTabBar" #tabbar>
       <KeepAlive>
         <TabBar
           v-model:active="activeName"

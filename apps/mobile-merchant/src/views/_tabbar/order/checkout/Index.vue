@@ -1,5 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ProductCard from './modules/ProductCard.vue';
+</script>
 
 <template>
-  <div>结账</div>
+  <div>
+    <ProductCard />
+  </div>
 </template>

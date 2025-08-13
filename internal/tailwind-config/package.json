@@ -11,5 +11,8 @@
   },
   "main": "src/index.ts",
   "module": "src/index.ts",
+  "exports": {
+    "postcss": "./src/postcss.config.ts"
+  },
   "packageManager": "pnpm@10.11.0"
 }
