@@ -9,28 +9,28 @@ export function useTabBar() {
   const tabBarPage = ref(false);
 
   watchEffect(() => {
-    active.value = route.name?.toString() || '';
+    active.value = route.fullPath?.toString() || '';
     tabBarPage.value = route.meta?.tabBarPage as boolean;
   });
 
   const items = [
     {
-      name: 'home',
+      name: '/home',
       icon: HomeIcon,
       label: '首页',
     },
     {
-      name: 'order',
+      name: '/order',
       icon: Order,
       label: '订单',
     },
     {
-      name: 'cart',
+      name: '/cart',
       icon: ShoppingCart,
       label: '购物车',
     },
     {
-      name: 'mine',
+      name: '/mine',
       icon: Mine,
       label: '我的',
       cover:

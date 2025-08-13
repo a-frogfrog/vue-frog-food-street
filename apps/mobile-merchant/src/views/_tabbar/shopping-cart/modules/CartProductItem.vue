@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { Image, RadioGroup, Radio, Stepper, SwipeCell, Button } from 'vant';
-import type { CartProductItem } from '../data';
+import { CountTo } from 'vue3-count-to';
+import { type CartProductItem, useOld } from '../data';
+import { computed } from 'vue';
 
 interface Props {
   item: CartProductItem;
@@ -10,8 +12,14 @@ type Emits = {
   (e: 'delete', id: string): void;
 };
 
-const { item } = defineProps<Props>();
+const props = defineProps<Props>();
 const emit = defineEmits<Emits>();
+
+const subTotal = computed(() => {
+  return props.item.number * props.item.price;
+});
+
+const { old } = useOld(subTotal);
 </script>
 
 <template>
@@ -41,13 +49,31 @@ const emit = defineEmits<Emits>();
         />
       </div>
       <div class="flex-1 !px-3 flex flex-col justify-end">
-        <div class="flex-1">
-          <h2 class="font-semibold text-lg truncate">{{ item.name }}</h2>
-          <p class="text-gray-500 text-sm">{{ item.specification }}</p>
+        <div class="flex-1 flex justify-end">
+          <div class="flex-1">
+            <h2 class="font-semibold text-lg truncate">{{ item.name }}</h2>
+            <p class="text-gray-500 text-sm">{{ item.specification }}</p>
+          </div>
+          <div>
+            <CountTo
+              class="text-xl font-inter"
+              :start-val="old"
+              :endVal="subTotal"
+              :duration="500"
+              :decimals="2"
+              prefix="￥"
+            />
+          </div>
         </div>
         <div class="flex justify-between items-center mt-2">
-          <p class="text-red-500 text-xl font-semibold">￥{{ item.price }}</p>
-          <Stepper integer min="1" max="100" v-model="item.number" />
+          <Stepper
+            v-bind="$attrs"
+            integer
+            min="1"
+            max="100"
+            :name="item.id"
+            v-model="item.number"
+          />
         </div>
       </div>
     </div>

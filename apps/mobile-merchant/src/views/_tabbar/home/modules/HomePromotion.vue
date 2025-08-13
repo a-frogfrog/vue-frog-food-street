@@ -3,27 +3,22 @@
  * @description: 首页-热门活动
  */
 
-import { MoreIcon } from '@frog/icons';
-import { Icon } from '@frog/common-ui';
+import { MoreIcon, Icon } from '@frog/icons';
 import { FrostedPicture, ScrollHorizontally } from '#/components';
 
 function useFrostedPicture() {
   const promotionItems = [
     {
+      src: '/imgs/promotions/promotion_2.png',
+      title: '🧊 清凉季 冰淇淋化冻必退',
+    },
+    {
+      src: '/imgs/promotions/promotion_1.png',
+      title: '😎 新疆水果节 新疆法兰西西梅11.9元',
+    },
+    {
       src: '/imgs/background/welcome.webp',
-      title: '🤣 ScrollHorizontally',
-    },
-    {
-      src: '/imgs/background/hot.webp',
-      title: '😎 ScrollHorizontally',
-    },
-    {
-      src: '/imgs/background/welcome.webp',
-      title: '😍 ScrollHorizontally',
-    },
-    {
-      src: '/imgs/background/hot.webp',
-      title: '✨ ScrollHorizontally',
+      title: '😍 清凉一夏',
     },
   ];
 

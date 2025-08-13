@@ -16,7 +16,8 @@
     "@frog/hooks": "workspace:*",
     "@frog/icons": "workspace:*",
     "@frog/request": "workspace:*",
-    "@frog/styles": "workspace:*"
+    "@frog/styles": "workspace:*",
+    "vue3-count-to": "^1.1.2"
   },
   "devDependencies": {
     "@frog/tailwind-config": "workspace:*",

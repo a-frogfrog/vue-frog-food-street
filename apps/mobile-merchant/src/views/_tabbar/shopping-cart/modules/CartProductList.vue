@@ -1,18 +1,19 @@
 <script setup lang="ts">
-import CartProductItem from './CartProductItem.vue';
 import { useShoppingCart } from '../data';
+import CartProductItem from './CartProductItem.vue';
+import CartSupplierInfo from './CartSupplierInfo.vue';
 
-const { productList, handleDelete } = useShoppingCart();
+const { productList } = useShoppingCart();
 </script>
 <template>
-  <div class="!p-2 !px-4">
-    <div class="bg-white rounded-md shadow-md !p-2">
-      <CartProductItem
-        @delete="handleDelete"
-        v-for="item in productList"
-        :item="item"
-        :key="item.id"
-      />
+  <div class="!px-4 flex-1 overflow-auto">
+    <div
+      class="bg-white rounded-md relative shadow-md !p-2 !pt-0 overflow-auto"
+    >
+      <template v-for="item in productList">
+        <CartSupplierInfo :item="item" :id="item.id" />
+        <CartProductItem v-for="i in item.products" :item="i" :key="item.id" />
+      </template>
     </div>
   </div>
 </template>

@@ -247,6 +247,9 @@ importers:
       '@frog/styles':
         specifier: workspace:*
         version: link:../../packages/effects/styles
+      vue3-count-to:
+        specifier: ^1.1.2
+        version: 1.1.2(vue@3.5.18(typescript@5.8.3))
     devDependencies:
       '@frog/tailwind-config':
         specifier: workspace:*
@@ -298,6 +301,8 @@ importers:
         version: 2.10.4(vue@3.5.18(typescript@5.8.3))
 
   internal/tailwind-config: {}
+
+  internal/ts-config: {}
 
   internal/vite-config: {}
 
@@ -2721,6 +2726,9 @@ packages:
   vscode-uri@3.1.0:
     resolution: {integrity: sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ==}
 
+  vue-count-to@1.0.13:
+    resolution: {integrity: sha512-6R4OVBVNtQTlcbXu6SJ8ENR35M2/CdWt3Jmv57jOUM+1ojiFmjVGvZPH8DfHpMDSA+ITs+EW5V6qthADxeyYOQ==}
+
   vue-demi@0.14.10:
     resolution: {integrity: sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg==}
     engines: {node: '>=12'}
@@ -2754,6 +2762,11 @@ packages:
     engines: {node: '>=10.15.0'}
     peerDependencies:
       vue: ^3.0.0
+
+  vue3-count-to@1.1.2:
+    resolution: {integrity: sha512-C5AvlcGfyM4XvFqPDkni94rqGd5K/+RB+B4xv/1NQx3RrdC+GvXPFzeXW5hWL/jh8ehWLm4LITyK0eMKf4iJbg==}
+    peerDependencies:
+      vue: '>= 3 < 4'
 
   vue@3.5.18:
     resolution: {integrity: sha512-7W4Y4ZbMiQ3SEo+m9lnoNpV9xG7QVMLa+/0RFwwiAVkeYoyGXqWE85jabU4pllJNUzqfLShJ5YLptewhCWUgNA==}
@@ -5202,6 +5215,8 @@ snapshots:
 
   vscode-uri@3.1.0: {}
 
+  vue-count-to@1.0.13: {}
+
   vue-demi@0.14.10(vue@3.5.18(typescript@5.8.3)):
     dependencies:
       vue: 3.5.18(typescript@5.8.3)
@@ -5233,6 +5248,12 @@ snapshots:
     dependencies:
       is-plain-object: 3.0.1
       vue: 3.5.18(typescript@5.8.3)
+
+  vue3-count-to@1.1.2(vue@3.5.18(typescript@5.8.3)):
+    dependencies:
+      core-js: 3.44.0
+      vue: 3.5.18(typescript@5.8.3)
+      vue-count-to: 1.0.13
 
   vue@3.5.18(typescript@5.8.3):
     dependencies:

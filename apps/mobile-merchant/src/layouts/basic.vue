@@ -38,7 +38,12 @@ const { topBarPage, handleBarClick, handleCartClick, handleSettingClick } =
       </RouterView>
     </template>
     <template #tabBar v-if="tabBarPage">
-      <TabBar :active="active" :items="items" @change="handleChange" />
+      <TabBar
+        :active="active"
+        :activeColor="'#e9e9e9'"
+        :items="items"
+        @change="handleChange"
+      />
     </template>
     <template #shoppingCart>
       <ShoppingCart />

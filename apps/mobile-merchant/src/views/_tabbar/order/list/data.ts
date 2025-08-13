@@ -10,11 +10,11 @@ export function useOrderItems() {
       productCount: 5,
       items: [
         {
-          name: '鸡肉',
+          name: '正宗野山鸡肉',
           price: 41.99,
           count: 2,
           photo:
-            'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-1.png',
+            'https://thfvnext.bing.com/th/id/OIP.4DE49mV9BEKXyHMb6jC6SAHaFe?r=0&o=7&cb=thfvnextrm=3&rs=1&pid=ImgDetMain&o=7&rm=3',
         },
       ],
     },
@@ -28,18 +28,17 @@ export function useOrderItems() {
       productCount: 5,
       items: [
         {
-          name: '鸡肉',
+          name: '正宗野山鸡肉',
           price: 20.5,
           count: 2,
           photo:
-            'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-1.png',
+            'https://thfvnext.bing.com/th/id/OIP.4DE49mV9BEKXyHMb6jC6SAHaFe?r=0&o=7&cb=thfvnextrm=3&rs=1&pid=ImgDetMain&o=7&rm=3',
         },
         {
           name: '日本5A和牛',
           price: 20.5,
           count: 2,
-          photo:
-            'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-1.png',
+          photo: 'https://ufoodin.com/storage/2023/03/6-1024x1024.jpg',
         },
       ],
     },
