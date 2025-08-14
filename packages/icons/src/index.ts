@@ -12,3 +12,4 @@ export { default as Mine } from './components/Mine.vue';
 export { default as Order } from './components/Order.vue';
 
 export { default as Money } from './components/Money.vue';
+export { default as LightBulb } from './components/LightBulb.vue';

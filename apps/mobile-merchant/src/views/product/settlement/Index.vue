@@ -1,3 +1,5 @@
 <script setup lang="ts"></script>
 
-<template>结算</template>
+<template>
+  <div>结算</div>
+</template>

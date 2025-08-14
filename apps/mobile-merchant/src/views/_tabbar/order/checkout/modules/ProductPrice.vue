@@ -1,18 +1,21 @@
 <script setup lang="ts">
 import { Icon, Money } from '@frog/icons';
+import { useCheckout } from '../data';
+
+const { totalPrice } = useCheckout();
 
 const priceItems = [
   {
     label: '商品金额',
-    value: '￥3002.33',
+    value: `￥${totalPrice.value}`,
   },
   {
     label: '配送费',
-    value: '￥3',
+    value: '￥0',
   },
   {
     label: '小计',
-    value: '￥3002.33',
+    value: `￥${totalPrice.value}`,
   },
 ];
 </script>
