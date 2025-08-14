@@ -1,0 +1,13 @@
+@layer utilities {
+  .tabbar {
+    @apply absolute !bottom-0  w-full;
+  }
+
+  .page-main {
+    @apply overflow-y-auto overflow-x-hidden;
+  }
+
+  .page-component {
+    @apply relative h-screen dark:bg-[#000000] bg-[#f5f5f5];
+  }
+}

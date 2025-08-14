@@ -5,12 +5,7 @@
 
 import { Page } from '#/components';
 import { useTabBar, useTopNavigation } from './data';
-import {
-  TabBar,
-  ShoppingCart,
-  TopNavigationBar,
-  TopNavigationBarItems,
-} from '#/components';
+import { TabBar, TopNavigationBar, TopNavigationBarItems } from '#/components';
 
 const { tabBarPage, items, active, handleChange } = useTabBar();
 const { topBarPage, handleBarClick, handleCartClick, handleSettingClick } =
@@ -18,8 +13,8 @@ const { topBarPage, handleBarClick, handleCartClick, handleSettingClick } =
 </script>
 
 <template>
-  <Page>
-    <template #topNavigation v-if="topBarPage">
+  <Page :isTabBar="tabBarPage" :isTopBar="topBarPage">
+    <template #topNavigation>
       <TopNavigationBar>
         <template #items>
           <TopNavigationBarItems
@@ -37,16 +32,13 @@ const { topBarPage, handleBarClick, handleCartClick, handleSettingClick } =
         </Transition>
       </RouterView>
     </template>
-    <template #tabBar v-if="tabBarPage">
+    <template #tabBar>
       <TabBar
         :active="active"
         :activeColor="'#e9e9e9'"
         :items="items"
         @change="handleChange"
       />
-    </template>
-    <template #shoppingCart>
-      <ShoppingCart />
     </template>
   </Page>
 </template>

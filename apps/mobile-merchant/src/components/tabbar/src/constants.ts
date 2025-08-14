@@ -1,13 +1,28 @@
 import type { Component } from 'vue';
 
-export const TAB_BAR_ACTIVE_KEY = 'active';
+/**
+ * 图标或图片默认大小
+ */
 export const TAB_BAR_ITEM_SIZE = 24;
 
 export interface TabBarProps {
+  /**
+   * @description 激活项
+   */
   active?: string;
+  /**
+   * @description 激活颜色
+   */
   activeColor?: string;
+  /**
+   * @description tabBar 项
+   */
   items?: TabBarItemProps[];
-  size?: number;
+
+  /**
+   * @description 图标或图片默认大小
+   */
+  iconSize?: number;
 }
 
 export interface TabBarItemProps {
