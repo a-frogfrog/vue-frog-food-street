@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CloseIcon } from '@frog/icons';
+import { IconClose } from '@frog/icons';
 import { FrogButton } from '../button';
 import type { ModalContentProps, ModalContentEmits } from './types';
 
@@ -13,7 +13,7 @@ const emit = defineEmits<ModalContentEmits>();
         <span>
           {{ props.title || 'tip' }}
         </span>
-        <component :is="props.closeIcon || CloseIcon" @click="emit('close')" />
+        <component :is="props.closeIcon || IconClose" @click="emit('close')" />
       </slot>
     </header>
     <div class="frog-modal-body">

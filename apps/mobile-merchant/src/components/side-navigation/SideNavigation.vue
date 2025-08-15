@@ -1,5 +1,4 @@
 <script setup lang="ts">
-//cSpell:ignore vant
 import { Popup } from 'vant';
 import SideNavigationAvatar from './SideNavigationAvatar.vue';
 import SideNavigationItem from './SideNavigationItem.vue';

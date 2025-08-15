@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Icon, MoreIcon } from '@frog/icons';
+import { IconMore } from '@frog/icons';
 import type { CartSupplierItem } from '../data';
 interface Props {
   item: CartSupplierItem;
@@ -21,9 +21,7 @@ const { item } = defineProps<Props>();
       </div>
     </div>
     <div>
-      <Icon :size="20">
-        <MoreIcon />
-      </Icon>
+      <IconMore size="20" />
     </div>
   </div>
 </template>

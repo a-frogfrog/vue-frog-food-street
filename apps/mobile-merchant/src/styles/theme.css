@@ -1,0 +1,5 @@
+html[data-theme='dark'] {
+  --bg-primary: #000000;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #242424;
+}

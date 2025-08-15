@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import type { IconProps } from '../icon';
+const props = defineProps<IconProps>();
+</script>
 <template>
   <svg
     t="1755171846689"
@@ -6,7 +10,10 @@
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     p-id="1633"
-    style="height: inherit; width: inherit"
+    :color="props.color"
+    :width="props.size"
+    :height="props.size"
+    fill="currentColor"
   >
     <path
       d="M640 896H384l-6.702-6.702A49.636 49.636 0 0 1 368 832a71.556 71.556 0 0 1 0-64h288a71.556 71.556 0 0 1 0 64 49.636 49.636 0 0 1-9.298 57.298z"

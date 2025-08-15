@@ -3,7 +3,7 @@
  * @description: 首页-热门活动
  */
 
-import { MoreIcon, Icon } from '@frog/icons';
+import { IconMore } from '@frog/icons';
 import { FrostedPicture, ScrollHorizontally } from '#/components';
 
 function useFrostedPicture() {
@@ -34,9 +34,7 @@ const { promotionItems } = useFrostedPicture();
   <div>
     <div class="!p-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold mb-4 dark:text-white">HOT 热门活动</h1>
-      <Icon :size="14">
-        <MoreIcon />
-      </Icon>
+      <IconMore size="14" />
     </div>
     <ScrollHorizontally>
       <template #content>

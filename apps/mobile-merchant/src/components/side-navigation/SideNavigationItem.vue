@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { Icon } from '@frog/common-ui';
-import { HomeIcon } from '@frog/icons';
+import { IconHome } from '@frog/icons';
 
 interface Props {
   title: string;
@@ -16,9 +15,7 @@ const emit = defineEmits<emit>();
 <template>
   <div class="mt-4 !py-2">
     <div @click="emit('click')" class="flex items-center gap-3">
-      <Icon :size="24">
-        <HomeIcon />
-      </Icon>
+      <IconHome size="24" />
       <span class="font-inter">{{ props.title }}</span>
     </div>
   </div>

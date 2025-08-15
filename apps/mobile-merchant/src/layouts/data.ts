@@ -1,6 +1,6 @@
 import { ref, watchEffect } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { HomeIcon, ShoppingCart, Mine, Order } from '@frog/icons';
+import { IconHome, IconShoppingCart, IconMine, IconOrder } from '@frog/icons';
 
 export function useTabBar() {
   const route = useRoute();
@@ -16,22 +16,22 @@ export function useTabBar() {
   const items = [
     {
       name: '/home',
-      icon: HomeIcon,
+      icon: IconHome,
       label: '首页',
     },
     {
       name: '/order',
-      icon: Order,
+      icon: IconOrder,
       label: '订单',
     },
     {
       name: '/cart',
-      icon: ShoppingCart,
+      icon: IconShoppingCart,
       label: '购物车',
     },
     {
       name: '/mine',
-      icon: Mine,
+      icon: IconMine,
       label: '我的',
       cover:
         'https://demos.themeselection.com/materio-vuetify-vuejs-admin-template/demo-1/images/avatars/avatar-1.png',

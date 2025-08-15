@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { Icon } from '@frog/common-ui';
-import { MoreIcon } from '@frog/icons';
+import { IconMore } from '@frog/icons';
 import { ref, useTemplateRef } from 'vue';
 
 interface Props {
@@ -65,13 +64,12 @@ const { isCollapse, toggleCollapse } = useCollapse();
           </div>
           <div class="flex">
             <span class="!px-2 text-gray-400">{{ productCount }} 项</span>
-            <Icon
-              :size="14"
+
+            <IconMore
+              size="14"
               class="rotate-90 duration-150"
               :class="isCollapse ? ' rotate-[270deg]' : 'rotate-90'"
-            >
-              <MoreIcon />
-            </Icon>
+            />
           </div>
         </div>
       </div>

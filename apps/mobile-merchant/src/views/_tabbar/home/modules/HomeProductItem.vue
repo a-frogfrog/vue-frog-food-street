@@ -3,8 +3,7 @@
  * @description 商品列表项
  */
 
-import { Icon } from '@frog/common-ui';
-import { OfficialAuthIcon } from '@frog/icons';
+import { IconStamp } from '@frog/icons';
 
 interface Product {
   productName: string;
@@ -53,9 +52,7 @@ const emit = defineEmits<Emits>();
       <h1 class="text-lg font-bold">{{ item.productName }}</h1>
       <div class="flex items-center gap-2 mt-2">
         <p class="text-gray-500 font-inter">￥{{ item.price }}</p>
-        <Icon :size="14">
-          <OfficialAuthIcon />
-        </Icon>
+        <IconStamp size="14" />
       </div>
       <div class="flex gap-4 items-center !mt-2">
         <div

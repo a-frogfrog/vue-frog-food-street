@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import type { IconProps } from './types';
+import type { IconProps } from './constants';
 
 const props = defineProps<IconProps>();
 

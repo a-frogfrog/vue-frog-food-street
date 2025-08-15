@@ -1,0 +1,13 @@
+export { default as IconMine } from './Mine.vue';
+export { default as IconSetting } from './Setting.vue';
+export { default as IconClose } from './Close.vue';
+export { default as IconCancel } from './Cancel.vue';
+export { default as IconHome } from './Home.vue';
+export { default as IconMore } from './More.vue';
+export { default as IconStamp } from './Stamp.vue';
+export { default as IconMonster } from './Monster.vue';
+export { default as IconShoppingCart } from './ShoppingCart.vue';
+export { default as IconMoney } from './Money.vue';
+export { default as IconLightBulb } from './LightBulb.vue';
+export { default as IconOrder } from './Order.vue';
+export { default as IconBar } from './Bar.vue';
