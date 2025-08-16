@@ -1,6 +1,6 @@
 import { ref, watchEffect } from 'vue';
 
-type ThemeType = 'light' | 'dark' | 'system';
+type ThemeType = 'light' | 'dark';
 const ThemeKey = '__theme__';
 
 function getTheme() {

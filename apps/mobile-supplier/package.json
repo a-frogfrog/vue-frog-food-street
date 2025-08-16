@@ -13,6 +13,7 @@
     "@frog/hooks": "workspace:*",
     "@frog/icons": "workspace:*",
     "@frog/styles": "workspace:*",
+    "@frog/tailwind-config": "workspace:*",
     "@frog/utils": "workspace:*"
   }
 }

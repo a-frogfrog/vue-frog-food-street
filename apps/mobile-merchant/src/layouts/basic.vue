@@ -42,3 +42,14 @@ const { topBarPage, handleBarClick, handleCartClick, handleSettingClick } =
     </template>
   </Page>
 </template>
+
+<style scoped>
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  opacity: 0;
+}
+</style>

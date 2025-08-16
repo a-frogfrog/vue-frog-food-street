@@ -11,3 +11,5 @@ export { default as IconMoney } from './Money.vue';
 export { default as IconLightBulb } from './LightBulb.vue';
 export { default as IconOrder } from './Order.vue';
 export { default as IconBar } from './Bar.vue';
+export { default as IconDarkOutlined } from './DarkOutlined.vue';
+export { default as IconLightOutlined } from './LightOutlined.vue';

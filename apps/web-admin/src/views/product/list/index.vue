@@ -147,6 +147,8 @@ const data = [
     </div>
   </Container>
 </template>
+
+
 <style scoped>
 .header-content,
 .main-content {

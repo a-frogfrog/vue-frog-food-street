@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import * as echarts from 'echarts';
 import { onMounted, useTemplateRef } from 'vue';
-import { Page } from '@frog/common-ui';
 
 const chartDom = useTemplateRef<HTMLDivElement>('mainRef');
 type EChartsOption = echarts.EChartsOption;
@@ -30,12 +29,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <Page>
+  <div>
     <div class="!p-4">
       <div class="text-lg font-bold">分析</div>
       <div id="main" ref="mainRef" style="width: 100%; height: 400px"></div>
     </div>
-  </Page>
+  </div>
 </template>
 
 <style scoped></style>

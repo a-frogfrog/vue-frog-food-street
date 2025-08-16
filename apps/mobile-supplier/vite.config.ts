@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import tailwindcss from '@tailwindcss/vite';
 import Inspect from 'vite-plugin-inspect';
 import { resolve } from 'path';
 import { viteAliases } from '../../internal/vite-config';
@@ -11,7 +10,7 @@ export default defineConfig({
     host: true,
     port: 4444, // 设置服务启动端口号
   },
-  plugins: [vue(), tailwindcss(), Inspect()],
+  plugins: [vue(), Inspect()],
   resolve: {
     alias: {
       '#': resolve(__dirname, './src'),

@@ -19,5 +19,6 @@
     "package.json": ".gitattributes,.gitignore,.gitpod.yml,.npmrc,.browserslistrc,.node-version,.git*,.tazerc.json,pnpm-lock.yaml,pnpm-workspace.yaml",
     "eslint*": ".eslintignore,.prettierignore,.stylelintignore,.commitlintrc.*,.prettierrc*,stylelint.config.*,.lintstagedrc.mjs,cspell.json,lefthook.yml",
     "tailwind.config*": "postcss.*"
-  }
+  },
+  "editor.fontSize": 16
 }

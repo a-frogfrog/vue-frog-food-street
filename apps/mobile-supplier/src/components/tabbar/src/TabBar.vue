@@ -19,7 +19,7 @@ const isActive = (name: string) => {
 };
 
 const getSize = computed(() => {
-  return props.size || TAB_BAR_ITEM_SIZE;
+  return props.iconSize || TAB_BAR_ITEM_SIZE;
 });
 </script>
 

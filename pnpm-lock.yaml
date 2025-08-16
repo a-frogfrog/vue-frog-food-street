@@ -272,6 +272,9 @@ importers:
       '@frog/styles':
         specifier: workspace:*
         version: link:../../packages/effects/styles
+      '@frog/tailwind-config':
+        specifier: workspace:*
+        version: link:../../internal/tailwind-config
       '@frog/utils':
         specifier: workspace:*
         version: link:../../packages/utils
@@ -333,7 +336,11 @@ importers:
 
   packages/effects/types: {}
 
-  packages/icons: {}
+  packages/icons:
+    dependencies:
+      vue:
+        specifier: '>=3.5.0'
+        version: 3.5.18(typescript@5.8.3)
 
   packages/utils: {}
 

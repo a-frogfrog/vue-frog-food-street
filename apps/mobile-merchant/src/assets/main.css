@@ -1,7 +1,0 @@
-@import './styles/theme.css';
-@import './styles/tailwind.css';
-@import './styles/global.css';
-
-* {
-  font-family: 'Inter', sans-serif;
-}

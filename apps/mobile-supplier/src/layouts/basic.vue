@@ -1,32 +1,21 @@
 <script setup lang="ts">
-import { Page, Content } from '@frog/common-ui';
-import { ToolBarPopup, TabBar } from '#/components';
-import { useTabBar } from './hooks/use-tabbar';
-import { useToolBar } from './hooks/use-toolbar';
-
-const { activeName, item, handleClick, isTabBar } = useTabBar();
-const { isShow, title, handleToolBarClick } = useToolBar();
+import { TabBar, Page } from '#/components';
+import { useTabBar } from './data';
+const { tabBarPage, items, active, handleChange } = useTabBar();
 </script>
 
 <template>
-  <Page>
-    <template #popup>
-      <ToolBarPopup v-model:show="isShow" />
+  <Page :isTabBar="tabBarPage">
+    <template #tabBar>
+      <TabBar
+        :active="active"
+        :activeColor="'#e9e9e9'"
+        :items="items"
+        @change="handleChange"
+      />
     </template>
-    <template v-if="isTabBar" #toolbar>
-      <ToolBar :title="title" @tool-bar-click="handleToolBarClick" />
-    </template>
-    <template v-if="isTabBar" #tabbar>
-      <KeepAlive>
-        <TabBar
-          v-model:active="activeName"
-          :items="item.items"
-          @tab-bar-item-click="handleClick"
-        />
-      </KeepAlive>
-    </template>
-    <template #content>
-      <Content />
+    <template #main>
+      <RouterView></RouterView>
     </template>
   </Page>
 </template>

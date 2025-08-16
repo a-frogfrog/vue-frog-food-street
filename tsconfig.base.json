@@ -6,12 +6,6 @@
     "module": "ESNext",
     "lib": ["ESNext", "DOM"],
     "moduleResolution": "bundler",
-    "baseUrl": ".", // 方便 paths 配置
-    "paths": {
-      // "@frog/*": ["packages/*/src"], // monorepo 包内互相引用
-      // "@internal/*": ["internal/*/src"]
-    },
-
     // 输出目录（一般由各子包 tsconfig 继承后覆盖）
     "outDir": "dist",
 
