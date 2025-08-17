@@ -3,6 +3,7 @@ const dashboard = {
   component: () => import('#/views/dashboard/index.vue'),
   meta: {
     requiresAuth: true,
+    title: 'Dashboard',
   },
 };
 

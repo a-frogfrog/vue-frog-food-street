@@ -71,6 +71,22 @@ export function useMenuData() {
       label: '供应商管理',
       disabled: false,
       icon: renderIcon('icon-shouye3'),
+      children: [
+        {
+          key: '/supplier/list',
+          title: '供应商列表',
+          label: '供应商列表',
+          disabled: false,
+          icon: renderIcon(''),
+        },
+        {
+          key: '/supplier/add',
+          title: '供应商新增',
+          label: '供应商新增',
+          disabled: false,
+          icon: renderIcon(''),
+        },
+      ],
     },
     {
       key: '/promotion',
@@ -83,6 +99,13 @@ export function useMenuData() {
           key: '/promotion/list',
           title: '促销列表',
           label: '促销列表',
+          disabled: false,
+          icon: renderIcon(''),
+        },
+        {
+          key: '/promotion/preview',
+          title: '活动预览',
+          label: '活动预览',
           disabled: false,
           icon: renderIcon(''),
         },

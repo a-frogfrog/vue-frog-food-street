@@ -4,4 +4,6 @@ export const APP_MERCHANT = {
 
 export const APP_SUPPLIER = {};
 
-export const APP_ADMIN = {};
+export const APP_ADMIN = {
+  NAME: '管理员',
+};

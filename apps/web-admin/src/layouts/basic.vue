@@ -6,7 +6,7 @@ import {
   LayoutMain,
   LayoutLogo,
   LayoutMenu,
-} from './components';
+} from './modules';
 
 import { useCollapse } from '@frog/hooks';
 import { TransitionLoading } from '@frog/common-ui';

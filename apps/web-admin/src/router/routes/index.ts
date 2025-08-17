@@ -8,6 +8,7 @@ import system from './modules/system';
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
+    redirect: '/dashboard',
     component: () => import('#/layouts/basic.vue'),
     meta: {
       requiresAuth: true,

@@ -1,23 +1,28 @@
 import type { NavigationGuardWithThis, NavigationHookAfter } from 'vue-router';
-import { eventEmitter } from '@frog/events';
+import { $e } from '@frog/events';
 import { useAuthStore } from '#/stores';
 
+const getTitle = (title: string) => {
+  return `${title} - ${import.meta.env.VITE_APP_TITLE}`;
+};
+
 const beforeEach: NavigationGuardWithThis<undefined> = (to: any) => {
-  eventEmitter.emit('progress:start');
+  $e.emit('progress:start');
+
+  document.title = getTitle(to.meta.title);
 
   const authStore = useAuthStore();
   if (to.meta.requiresAuth) {
     if (!authStore.isAuthenticated) {
       return { path: '/auth/login' };
     }
-    // authStore.checkLogin();
   }
 
   return true;
 };
 
 const afterEach: NavigationHookAfter = (): void => {
-  eventEmitter.emit('progress:finish');
+  $e.emit('progress:finish');
 };
 
 export default {
